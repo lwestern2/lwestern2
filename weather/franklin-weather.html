@@ -4,63 +4,100 @@
 <head>
  <meta charset="UTF-8">
  <title>Franklin, ID | Weather Site</title>
- <meta name="Franklin, ID" content="Web page showing the current weather information for Franklin, ID.">
+ <meta name="Franklin, ID" content="The current weather information for Franklin, ID from The Weather Site. Current, High and low temperatures, Wind, Hourly forecast.">
  <meta name="viewport" content="width=device-width">
+ <link href="/weather/css/franklin-screen.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
 
- <header>
-  <h1>Franklin, ID</h1>
+ <header id="page-header">
+  <div id="logo">&#9748;</div>
+  <p id="site-brand">The Weather Site</p>
  </header>
 
- <nav>
-  <ul>
-   <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a></li>
-  </ul>
- </nav>
  <main>
-  <img src="/Pictures/plan-images/logo.jpeg" alt="Weather site logo. Depicts an umbella with rain drops coming down on it">
-  <h1>The Weather Site</h1>
-  <nav>
-  <ul>
-   <li>Current</li>
-   <li>Search</li>
-   <li><a href="franklin-weather.html" title="Go to Franklin, ID weather"></a>Franklin</li>
-   <li>Greenville</li>
-   <li>Springfield</li>
+  <nav id="main nav">
+   <ul>
+    <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a></li>
+    <li>Current</li>
+    <li>Search</li>
+    <li><a href="franklin-weather.html" title="Go to Franklin, ID weather"></a>Franklin</li>
+    <li>Greenville</li>
+    <li>Springfield</li>
    </ul>
   </nav>
 
-  <h2>Franklin, Idaho</h2>
-  <p>
-   Zip:83237<br>
-   Elevation: 4501 ft. <br>
-   Location: 42.0135N, 111.8072W
-  </p>
+  <h1>Franklin, Idaho</h1>
+  <section id="locationInfo">
+   <p>
+    Zip: 83237<br>
+    Elevation: 4501 ft.<br>
+    Location: 42.0135&deg; N, 111.8072&deg; W
+   </p>
+  </section>
 
-  <h2>Temperature</h2>
-  <p>
-   24F<br>
-   34F 21F<br>
-   Feels like 21F
-  </p>
+  <div id="curWeather">
+   <div id="smallConditions">
+    <section id="temps">
+     <h2>Temperature</h2>
+     <p>
+      24&deg;F<br>
+      34&deg;F<br>
+      21&deg;F<br>
+      Feels like 21&deg;F
+     </p>
+    </section>
 
-  <h2>Wind</h2>
-  <p>
-   N 2 mph <br>
-   Direction: NW<br>
-   Gusts: 5mph
-  </p>
+    <section id="wind">
+     <h2>Wind</h2>
+     <div id="dial" class="nw"></div>
+     <div id="wind-info">
+      <p id="wind-speed">2 mph</p>
+      <div id="wind-direction">
+       Direction: NW Gusts: 5mph
+      </div>
+     </div>
+    </section>
+   </div>
 
-  <h2>Video Forecast</h2>
-  <p>(place video link here)</p>
+   <section id="video">
+    <h2>Video Forecast</h2>
+    <p>(place video link here)</p>
+   </section>
+  </div>
 
-  <h2>Hourly Forecast</h2>
-  <p>
-   12am: 21F | 1am: 21F | 2am: 21F | 3am: 20F | 4am: 20F | 5am: 20F | 6am: 20F | 7am: 21F | 8am: 21F
-  </p>
+  <section id="hourly">
+   <h2>Hourly Forecast</h2>
+   <ul>
+    <li>12am: 21F</li>
+    <li>1am: 21F</li>
+    <li>2am: 21F</li>
+    <li>3am: 20F</li>
+    <li>4am: 20F</li>
+    <li>5am: 20F</li>
+    <li>6am: 20F</li>
+    <li>7am: 21F</li>
+    <li>8am: 25F</li>
+    <li>9am: 28F</li>
+    <li>10am: 30F</li>
+    <li>11am: 34F</li>
+    <li>12pm: 35F</li>
+    <li>1pm: 37F</li>
+    <li>2pm: 38F</li>
+    <li>3pm: 39F</li>
+    <li>4pm: 39F</li>
+    <li>5pm: 38F</li>
+    <li>6pm: 36F</li>
+    <li>7pm: 34F</li>
+    <li>8pm: 33F</li>
+    <li>9pm: 33F</li>
+    <li>10pm: 31F</li>
+    <li>11pm: 31F</li>
+   </ul>
+  </section>
  </main>
+
  <footer>
   &copy;2018 Weather Site
  </footer>

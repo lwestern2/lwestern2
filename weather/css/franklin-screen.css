@@ -1,0 +1,54 @@
+/*This is my screen file for the weather site*/
+/*Imports must be the first thing (like Java)
+Imported Sansita from Google Fonts.*/
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+@import url('normalize.css');
+
+/*
+Table of Contents
+
+1. General rules
+2. Mobile first rules
+   2.a. Layout
+3. Large screens rules
+   3.a. Layout
+   3.b. Just for laptops
+
+*/
+
+/*----- 1. General rules -----*/
+* {
+ box-sizing: border-box; /* changes width property
+ to total width instead of content width */
+}
+*:before, *:after{
+ box-sizing: border-box;
+}
+
+body {
+ font-family: helvetica arial sans-serif; /* body font */
+ font-size: 18px;
+}
+
+/*----- 2. Mobile first rules -----
+----------- 2.a. Layout -----------*/
+#site-brand {
+ font-size: 2em;
+ font-weight: 600;
+}
+
+nav ul li {
+ display: inline-block;
+ list-style: none;
+ height: auto;
+}
+
+nav {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+}
+
+footer{
+ margin-bottom: 2em;
+}

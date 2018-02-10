@@ -13,50 +13,45 @@
 
  <header id="page-header">
   <div id="logo">&#9748;</div>
-  <p id="site-brand">The Weather Site</p>
+  <h1 id="site-brand">The Weather Site</h1>
  </header>
 
  <main>
   <nav id="main-nav">
    <ul>
-    <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a></li>
-    <li>Current</li>
-    <li>Search</li>
-    <li><a href="franklin-weather.html" title="Go to Franklin, ID weather"></a>Franklin</li>
-    <li>Greenville</li>
+    <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a> | </li>
+    <li>Current | </li>
+    <li>Search | </li>
+    <li><a href="/weather/franklin-weather.html" title="Go to Franklin, ID weather">Franklin</a> | </li>
+    <li>Greenville | </li>
     <li>Springfield</li>
    </ul>
   </nav>
 
   <h1>Franklin, Idaho</h1>
-  <div id="locationInfo">
+  <div id="location-info">
    <p>
-    Zip: 83237<br>
-    Elevation: 4501 ft.<br>
-    Location: 42.0135&deg; N, 111.8072&deg; W
+    <b>Zip</b>: 83237 | <b>Elevation</b>: 4501 ft. | <b>Location</b>: 42.0135&deg; N, 111.8072&deg; W
    </p>
   </div>
 
-  <div id="curWeather">
-   <div id="smallConditions">
+  <div id="cur-weather">
+   <div id="small-conditions">
     <section id="temps">
      <h2>Temperature</h2>
-     <p>
-      24&deg;F<br>
-      34&deg;F<br>
-      21&deg;F<br>
-      Feels like 21&deg;F
-     </p>
+     <p id="current-temp"><strong>24&deg;F</strong></p><br>
+     <p id="high-temp">34&deg;F</p>
+     <p id="low-temp">21&deg;F</p> <br>
+     <p id="feels-like">Feels like 21&deg;F</p>
     </section>
 
     <section id="wind">
-     <h2>Wind</h2>
+     <h2 id="wind-head">Wind</h2>
      <div id="dial" class="nw"></div>
      <div id="wind-info">
       <p id="wind-speed">2 mph</p>
-      <div id="wind-direction">
-       Direction: NW Gusts: 5mph
-      </div>
+      <p id="wind-direction">Direction: NW</p>
+      <p id="wind-gust">Gusts: 5mph</p>
      </div>
     </section>
    </div>
@@ -99,7 +94,7 @@
  </main>
 
  <footer>
-  &copy;2018 Weather Site
+  &copy; 2018 Weather Site
  </footer>
 </body>
 

@@ -34,7 +34,7 @@ Table of Contents
 body {
  font-family: helvetica, arial, sans-serif;
  /* body font */
- font-size: 18px;
+ font-size: 20px;
 }
 
 h1,
@@ -72,11 +72,19 @@ nav ul li {
  height: auto;
 }
 
+#main-nav ul {
+margin: 0;
+padding: 0;
+font-size: 4.5vw;
+max-width: none;
+}
+
 nav {
  position: fixed;
  bottom: 0;
  left: 0;
  background-color: #0e89d5;
+ width: 100%;
 }
 
 nav a:link {
@@ -101,6 +109,9 @@ nav a:active {
 /*End Main Navigation Styling*/
 
 /*Mobile Sections of Current Weather*/
+h2 {
+ display: none;
+}
 #cur-weather {
  background-image: url("/weather/images/sunny-winter.jpg");
  background-size: cover;
@@ -170,6 +181,6 @@ nav a:active {
 /*End Mobile Sections of Current Weather*/
 
 footer {
- margin-bottom: 3em;
+ margin-bottom: 2em;
  background-color: #0e89d5;
 }

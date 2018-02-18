@@ -19,76 +19,76 @@
  <main>
   <nav id="main-nav">
    <ul>
-    <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a> | </li>
-    <li>Current | </li>
-    <li>Search | </li>
-    <li><a href="/weather/franklin-weather.html" title="Go to Franklin, ID weather">Franklin</a> | </li>
-    <li>Greenville | </li>
+    <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a></li>
+    <li>Search</li>
+    <li><a href="/weather/franklin-weather.html" title="Go to Franklin, ID weather">Franklin</a></li>
+    <li>Greenville</li>
     <li>Springfield</li>
    </ul>
   </nav>
 
   <h1>Franklin, Idaho</h1>
   <div id="location-info">
-   <p>
-    <b>Zip</b>: 83237 | <b>Elevation</b>: 4501 ft. | <b>Location</b>: 42.0135&deg; N, 111.8072&deg; W
-   </p>
+   <p><b>Zip</b>: 83237 | <b>Elevation</b>: 4501 ft. | <b>Location</b>: 42.0135&deg; N, 111.8072&deg; W</p>
   </div>
 
   <div id="cur-weather">
    <div id="small-conditions">
     <section id="temps">
      <h2>Temperature</h2>
-     <p id="current-temp"><strong>24&deg;F</strong></p><br>
-     <p id="high-temp">34&deg;F</p>
-     <p id="low-temp">21&deg;F</p> <br>
-     <p id="feels-like">Feels like 21&deg;F</p>
+     <p id="current-temp" class="column-temps"><strong>24&deg;F</strong></p>
+     <p id="high-temp" class="row-temps">34&deg;F</p>
+     <p id="low-temp" class="row-temps">21&deg;F</p>
+     <p id="feels-like" class="column-temps">Feels like 21&deg;F</p>
     </section>
 
     <section id="wind">
      <h2 id="wind-head">Wind</h2>
-     <div id="dial" class="nw"></div>
+     <p id="fixed-N">N</p>
+     <div id="dial" class="nw">
+     <img src="/weather/images/wind-pointer.png" alt="Visual wind dial that indicates what direction the wind is coming from">
+     </div>
      <div id="wind-info">
       <p id="wind-speed">2 mph</p>
-      <p id="wind-direction">Direction: NW</p>
-      <p id="wind-gust">Gusts: 5mph</p>
+      <p id="wind-direction"><b>Direction</b>: NW</p>
+      <p id="wind-gust"><b>Gusts</b>: 5mph</p>
      </div>
     </section>
    </div>
 
    <section id="video">
     <h2>Video Forecast</h2>
-    <p>(place video link here)</p>
+    <img src=/weather/images/video.png alt="video player icon">
    </section>
   </div>
 
   <section id="hourly">
    <h2>Hourly Forecast</h2>
-   <ul>
-    <li>12am: 21F</li>
-    <li>1am: 21F</li>
-    <li>2am: 21F</li>
-    <li>3am: 20F</li>
-    <li>4am: 20F</li>
-    <li>5am: 20F</li>
-    <li>6am: 20F</li>
-    <li>7am: 21F</li>
-    <li>8am: 25F</li>
-    <li>9am: 28F</li>
-    <li>10am: 30F</li>
-    <li>11am: 34F</li>
-    <li>12pm: 35F</li>
-    <li>1pm: 37F</li>
-    <li>2pm: 38F</li>
-    <li>3pm: 39F</li>
-    <li>4pm: 39F</li>
-    <li>5pm: 38F</li>
-    <li>6pm: 36F</li>
-    <li>7pm: 34F</li>
-    <li>8pm: 33F</li>
-    <li>9pm: 33F</li>
-    <li>10pm: 31F</li>
-    <li>11pm: 31F</li>
+   <ul id="hourly-list">
+    <li>12am: 21&deg;F</li>
+    <li>1am: 21&deg;F</li>
+    <li>2am: 21&deg;F</li>
+    <li>3am: 20&deg;F</li>
+    <li>4am: 20&deg;F</li>
+    <li>5am: 20&deg;F</li>
+    <li>6am: 20&deg;F</li>
+    <li>7am: 21&deg;F</li>
+    <li>8am: 25&deg;F</li>
+    <li>9am: 28&deg;F</li>
+    <li>10am: 30&deg;F</li>
+    <li>11am: 34&deg;F</li>
+    <li>12pm: 35&deg;F</li>
+    <li>1pm: 37&deg;F</li>
+    <li>2pm: 38&deg;F</li>
+    <li>3pm: 39&deg;F</li>
+    <li>4pm: 39&deg;F</li>
+    <li>5pm: 38&deg;F</li>
+    <li>6pm: 36&deg;F</li>
+    <li>7pm: 34&deg;F</li>
+    <li>8pm: 33&deg;F</li>
+    <li>9pm: 33&deg;F</li>
+    <li>10pm: 31&deg;F</li>
+    <li>11pm: 31&deg;F</li>
    </ul>
   </section>
  </main>

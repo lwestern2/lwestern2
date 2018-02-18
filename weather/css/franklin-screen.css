@@ -1,7 +1,9 @@
 /*This is my screen file for the weather site*/
 
 /*Imports must be the first thing (like Java)
-Imported Sansita from Google Fonts.*/
+Imported Sansita from Google Fonts.
+Imported the normalize css stylesheet
+Use vw for sizing so that it works on different size screens*/
 
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 @import url('normalize.css');
@@ -11,7 +13,14 @@ Table of Contents
 
 1. General rules
 2. Mobile first rules
-   2.a. Layout
+   2.a. Header layout and styling
+   2.b. Main navigavtion styling
+   2.c. Location Styling
+   2.d. Current Weather
+    2.d.1. Temperature Styling
+    2.d.2. Wind Styling
+    2.d.3. Video Styling
+   2.e. Hourly Styling
 3. Large screens rules
    3.a. Layout
    3.b. Just for laptops
@@ -47,36 +56,59 @@ h6 {
 }
 
 /*----- 2. Mobile first rules -----
------------ 2.a. Layout -----------*/
+---2.a Header layout and styling---*/
 
 #page-header {
  background-color: #0e89d5;
+ display: flex;
+ align-content: flex-start;
 }
 
 #site-brand {
- font-size: 2.5em;
+ font-size: 1.5em;
  font-weight: 600;
- display: inline-block;
 }
 
 #logo {
- display: inline-block;
- font-size: 70px;
- padding-top: 10px;
+ font-size: 1.75em;
+ padding: 5px;
+}
+/*End Header layout and styles*/
+
+/*--2.b. Main Navigavtion Styling--*/
+nav ul li {
+ list-style: none;
+ color: #FFFF;
+ padding: .75em;
+ display: block;
+ font-size: 13px;
+ height: 40px;
 }
 
-/*Main Navigvation Styling*/
-nav ul li {
- display: inline-block;
- list-style: none;
- height: auto;
-}
+/*cit230tth.github.io
+north: font-size: smaller
+margin: .5em 0 0 0
+z-index: 100
+ dial: add classes for the directions so that it moves. (0deg)
+
+hourly: nowrap
+overflow-x: scroll
+align-items: center
+list-style: none
+padding: .15em
+margin: .25em 0;
+height: 40px
+list items:
+flex: 0 0 auto
+padding: 0 .25em
+border-right: 1px solid #000
+*/
 
 #main-nav ul {
+display: flex;
+justify-content: space-around;
 margin: 0;
 padding: 0;
-font-size: 4.5vw;
-max-width: none;
 }
 
 nav {
@@ -84,12 +116,13 @@ nav {
  bottom: 0;
  left: 0;
  background-color: #0e89d5;
- width: 100%;
+ width: 100vw;
+ font-size: 4vw;
 }
 
 nav a:link {
  text-decoration: none;
- color: #6c4ddb;
+ color: #FFF;
 }
 
 nav a:visited {
@@ -104,14 +137,31 @@ nav a:hover {
 
 nav a:active {
  text-decoration: none;
- color: #FFF;
+ color: #d8f;
 }
 /*End Main Navigation Styling*/
 
-/*Mobile Sections of Current Weather*/
+/*-----2.c. Location Styling ------*/
+h1 {
+ margin: 0;
+ padding-top: 5px;
+ padding-left: 7px;
+ font-size: 33px;
+}
+
+#location-info {
+ width: 100vw;
+ display: flex;
+ font-size: 3.1vw;
+ padding-left: 7px;
+}
+/*End location styles*/
+
+/*-----2.d. Current Weather------*/
 h2 {
  display: none;
 }
+
 #cur-weather {
  background-image: url("/weather/images/sunny-winter.jpg");
  background-size: cover;
@@ -126,61 +176,117 @@ h2 {
  margin: .2em auto;
  border: 1px solid;
  border-radius: 15px;
+ display: flex;
+ padding: .1em;
 }
 
-/*Temperature Styling for Mobile*/
+/*----2.d.1 Temperature Styling----*/
 #temps {
- display: inline-block;
+ display: flex;
+ flex-wrap: wrap;
+ align-content: space-around;
+ width: 65vw;
 }
+
 #current-temp {
- display: inline-block;
- font-size: 60px;
- margin-top: 5px;
- margin-bottom: 5px;
- padding-left: 20px;
+ font-size: 4em;
+ margin: 0;
+ padding-left: 17px;
 }
 
 #high-temp {
  color: red;
- display: inline-block;
- padding-left: 20px;
- margin-top: 0px;
- margin-bottom: 0px;
+ margin: 0;
+ padding-left: 35px;
 }
 
 #low-temp {
  color: blue;
- display: inline-block;
- padding-left: 40px;
- margin-top: 0px;
- margin-bottom: 0px;
+ margin: 0;
+ padding-left: 25px;
 }
 
 #feels-like {
- display: inline-block;
+ margin: 0;
  padding-left: 20px;
- margin-top: 5px;
 }
 /*End Temperature Styling*/
 
-/*Wind Styling*/
+/*----2.d.2. Wind Styling----*/
 #wind {
- display: inline-block;
- margin-left: 60px;
+ display: flex;
+ flex-flow: column nowrap;
 }
 
-#wind-head {
- margin-bottom: 51px;
+#fixed-N {
+ font-size: smaller;
+ margin: 5px 7px 0px 0px;
+ align-self: center;
+}
+
+#dial img {
+ align-self: center;
+ width: 23vw;
+ margin: .5em 0 0 0;
+ z-index: 100;
+}
+
+#wind-speed {
+ margin: 0;
+}
+
+#wind-direction {
+ font-size: .8em;
+ margin: 0;
+}
+
+#wind-gust {
+ font-size: .8em;
+ margin: 0;
 }
 /*End Wind Styling*/
 
-/*Video Styling*/
+/*----2.d.3 Video Styling----*/
 #video {
- color: #FFF;
+ background-color: rgba(200, 200, 200, .6);
+ margin: .2em auto;
+ border: 1px solid;
+ border-radius: 15px;
 }
-/*End Mobile Sections of Current Weather*/
+
+#video img {
+ width: 50vw;
+ height: auto;
+ margin: .1vw 0 .1vw 25vw;
+ padding: .5vw 0 .2vw 0;
+}
+/*End Current Weather*/
+
+/*----2.e. Hourly Styling----
+how to make a horizontal slider scroll*/
+#hourly-list {
+ background-color: rgba(200, 200, 200, .6);
+ margin: .2em auto;
+ border: 1px solid;
+ border-radius: 15px;
+ display: flex;
+ flex-wrap: nowrap;
+ overflow-x: auto;
+ align-items: center;
+ padding: .15em;
+ margin: .25em 0;
+ height: 40px;
+}
+
+#hourly-list li{
+ display: flex;
+ list-style: none;
+ flex: 0 0 auto;
+ padding: 0 .25em;
+ border-right: 1px solid #000;
+}
+/*End Hourly Styling*/
 
 footer {
- margin-bottom: 2em;
  background-color: #0e89d5;
 }

@@ -317,7 +317,8 @@ footer {
  margin-bottom: 2em;
 }
 
-/* ----------------- 3. Large Screens: 414px / 20.7em --------------------*/
+/* ----------------- 3. Large Screens: 414px / 20.7em --------------------
+Need to fix tile placement and even spaced, font size of nav links, and arrow and scrolling in hourly*/
 
 @media screen and (min-width: 414px) {
  body>div {

@@ -6,11 +6,11 @@
  <title>Franklin, ID | Weather Site</title>
  <meta name="Franklin, ID" content="The current weather information for Franklin, ID from The Weather Site. Current, High and low temperatures, Wind, Hourly forecast.">
  <meta name="viewport" content="width=device-width">
- <link href="/weather/css/franklin-screen.css" rel="stylesheet" type="text/css" media="screen">
+ <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
-
+<div>
  <header id="page-header">
   <div id="logo">&#9748;</div>
   <h1 id="site-brand">The Weather Site</h1>
@@ -22,7 +22,7 @@
     <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a></li>
     <li>Search</li>
     <li><a href="/weather/franklin-weather.html" title="Go to Franklin, ID weather">Franklin</a></li>
-    <li>Greenville</li>
+    <li><a href="/weather/greenville-weather.html" title="Go to Greenville, SC weather page">Greenville</a></li>
     <li>Springfield</li>
    </ul>
   </nav>
@@ -32,33 +32,34 @@
    <p><b>Zip</b>: 83237 | <b>Elevation</b>: 4501 ft. | <b>Location</b>: 42.0135&deg; N, 111.8072&deg; W</p>
   </div>
 
-  <div id="cur-weather">
+  <div id="cur-weather" class="sunny">
    <div id="small-conditions">
     <section id="temps">
      <h2>Temperature</h2>
-     <p id="current-temp" class="column-temps"><strong>24&deg;F</strong></p>
-     <p id="high-temp" class="row-temps">34&deg;F</p>
-     <p id="low-temp" class="row-temps">21&deg;F</p>
-     <p id="feels-like" class="column-temps">Feels like 21&deg;F</p>
+     <p id="current-temp"><strong>24&deg;F</strong></p>
+     <p id="high-temp">34&deg;F</p>
+     <p id="low-temp">21&deg;F</p>
+     <p id="feels-like">Feels like 21&deg;F</p>
     </section>
 
     <section id="wind">
      <h2 id="wind-head">Wind</h2>
      <p id="fixed-N">N</p>
      <div id="dial" class="nw">
-     <img src="/weather/images/wind-pointer.png" alt="Visual wind dial that indicates what direction the wind is coming from">
      </div>
      <div id="wind-info">
       <p id="wind-speed">2 mph</p>
-      <p id="wind-direction"><b>Direction</b>: NW</p>
-      <p id="wind-gust"><b>Gusts</b>: 5mph</p>
+      <p id="wind-direction"><b>Direction:</b> NW</p>
+      <p id="wind-gust"><b>Gusts:</b> 5mph</p>
      </div>
     </section>
    </div>
 
    <section id="video">
     <h2>Video Forecast</h2>
+    <div id="video-icon">
     <img src=/weather/images/video.png alt="video player icon">
+    </div>
    </section>
   </div>
 
@@ -90,12 +91,15 @@
     <li>10pm: 31&deg;F</li>
     <li>11pm: 31&deg;F</li>
    </ul>
+<!--   <div id-"arrow">&rsaquo;</div>-->
   </section>
+  <div id="line"></div>
  </main>
 
  <footer>
   &copy; 2018 Weather Site
  </footer>
+ </div>
 </body>
 
 </html>

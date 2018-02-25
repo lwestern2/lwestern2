@@ -8,8 +8,7 @@ Use vw for sizing so that it works on different size screens*/
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 @import url('normalize.css');
 
-/*
-Table of Contents
+/*--------------Table of Contents------------------
 
 1. General rules
 2. Mobile first rules
@@ -22,9 +21,21 @@ Table of Contents
     2.d.3. Video Styling
    2.e. Hourly Styling
 3. Large screens rules
+     Things to change:
+     X1. Make section headings visible
+     X2. Nav bar to top
+     X3. T/W/V in separate boxes
+     X4. T/W/V in a single container
+     5. T/W/V aligned, same size, evenly distributed
+     X6. T/W/V on same line
+     X7. Hourly forecast in a box
+     8. Footer has a line above it
+     9. Things are sized
+     10. dial centered in container
+     X11. content center in viewport
+     12. right arrow in hourly temp container (symbol)
    3.a. Layout
    3.b. Just for laptops
-
 */
 
 /*----- 1. General rules -----*/
@@ -61,7 +72,8 @@ h6 {
 #page-header {
  background-color: #0e89d5;
  display: flex;
- align-content: flex-start;
+ justify-content: flex-start;
+ align-content: center;
 }
 
 #site-brand {
@@ -117,7 +129,7 @@ nav {
  left: 0;
  background-color: #0e89d5;
  width: 100vw;
- font-size: 4vw;
+ font-size: 5em;
 }
 
 nav a:link {
@@ -127,12 +139,12 @@ nav a:link {
 
 nav a:visited {
  text-decoration: none;
- color: #d8f;
+ color: #FFF;
 }
 
 nav a:hover {
  text-decoration: none;
- color: #FFF;
+ color: #6c4ddb;
 }
 
 nav a:active {
@@ -168,7 +180,6 @@ h2 {
  background-color: rgba(200, 200, 200, .6);
  margin: .2em auto;
  border: 1px solid;
- border-radius: 15px;
 }
 
 #small-conditions {
@@ -184,7 +195,6 @@ h2 {
 #temps {
  display: flex;
  flex-wrap: wrap;
- align-content: space-around;
  width: 65vw;
 }
 
@@ -197,7 +207,7 @@ h2 {
 #high-temp {
  color: red;
  margin: 0;
- padding-left: 35px;
+ padding-left: 40px;
 }
 
 #low-temp {
@@ -208,7 +218,7 @@ h2 {
 
 #feels-like {
  margin: 0;
- padding-left: 20px;
+ padding-left: 30px;
 }
 /*End Temperature Styling*/
 
@@ -216,28 +226,35 @@ h2 {
 #wind {
  display: flex;
  flex-flow: column nowrap;
+ position: relative;
+ text-align: center;
 }
 
 #fixed-N {
  font-size: smaller;
- margin: 5px 7px 0px 0px;
- align-self: center;
+ margin: 0;
 }
 
-#dial img {
- align-self: center;
- width: 23vw;
- margin: .5em 0 0 0;
+#dial {
+ height: 150px;
+ width: 150px;
+ background: no-repeat center/85% url('/weather/images/wind-pointer.png');
+ margin: -.6em auto 0;
  z-index: 100;
 }
 
 #wind-speed {
- margin: 0;
+ position: absolute;
+ top: 30%;
+ text-align: center;
+ right: 0px;
+ left: 0px;
 }
 
 #wind-direction {
  font-size: .8em;
  margin: 0;
+ margin-bottom: 2px;
 }
 
 #wind-gust {
@@ -254,7 +271,7 @@ h2 {
  border-radius: 15px;
 }
 
-#video img {
+#video-icon {
  width: 50vw;
  height: auto;
  margin: .1vw 0 .1vw 25vw;
@@ -278,7 +295,7 @@ how to make a horizontal slider scroll*/
  height: 40px;
 }
 
-#hourly-list li{
+#hourly-list li {
  display: flex;
  list-style: none;
  flex: 0 0 auto;
@@ -289,4 +306,151 @@ how to make a horizontal slider scroll*/
 
 footer {
  background-color: #0e89d5;
+ margin-bottom: 2em;
 }
+
+/* ----------------- 3. Large Screens: 414px / 20.7em --------------------*/
+
+@media screen and (min-width: 414px) {
+ body>div {
+  /*max screen size and line length is 1100px, good guideline
+  If the screen is bigger, make the content centered at the max width of 1100px*/
+  max-width: 1100px;
+  margin: 0 auto;
+ }
+
+ h2 {
+  display: block;
+  margin: .25em 0;
+ }
+
+ #site-brand {
+  font-size: 3em;
+  font-weight: 500;
+ }
+
+ #logo {
+  font-size: 3em;
+  padding: 5px;
+ }
+
+ nav {
+  position: relative;
+  font-size: 5vw;
+  width: auto;
+ }
+
+ h1 {
+  font-size: 2em;
+ }
+
+ #location-info {
+  font-size: 1.3vw;
+ }
+
+ #cur-weather {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0;
+  width: auto;
+ }
+
+ #small-conditions {
+  background-color: transparent;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+ }
+
+ #wind, #temps, #video {
+  background-color: rgba(200, 200, 200, .6);
+  margin: 0;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: .1em;
+  width: 250px;
+  height: 270px;
+  display: flex;
+  align-content: space-evenly;
+ }
+
+ #temps > h2{
+  padding-left: 3vw;
+ }
+
+ #current-temp {
+  padding-left: 2.7vw;
+ }
+
+ #high-temp {
+  padding-left: 4.65vw;
+ }
+
+ #low-temp {
+  padding-left: 25px;
+ }
+
+ #feels-like {
+  padding-left: 3.8vw;
+ }
+
+ #wind-speed {
+  top: 38%;
+ }
+
+ #video {
+  flex-direction: column;
+  align-items: center;
+ }
+
+ #video img {
+  width: 200px;
+ }
+
+ #video-icon {
+  position: relative;
+  width: auto;
+  margin: 0;
+ }
+
+ #hourly {
+  background-color: rgba(200, 200, 200, .6);
+  margin: .2em auto;
+  border: 1px solid;
+  border-radius: 15px;
+  overflow-x: auto;
+  align-items: center;
+  padding: .15em;
+  margin: .25em 0;
+  height: 90px;
+
+ }
+
+ #hourly > h2 {
+  font-size: 20px;
+  margin-left: 5px;
+ }
+
+ #hourly-list {
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  overflow-x: hidden;
+  display: flex;
+  padding: 0;
+  margin: 0;
+ }
+
+ #arrow {
+
+ }
+
+ #line {
+  border: 1.5px solid #000;
+  margin-top: 15px;
+  margin-bottom: 7px;
+ }
+}
+

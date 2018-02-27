@@ -377,7 +377,6 @@ Need to fix arrow and scrolling in hourly*/
  /*------3.d. Current Weather------*/
  #cur-weather {
   display: flex;
-  justify-content: space-evenly;
   padding: 1em 0;
   width: auto;
  }
@@ -458,7 +457,6 @@ Need to fix arrow and scrolling in hourly*/
   padding: .15em;
   margin: .25em 0;
   height: 90px;
-
  }
 
  #hourly > h2 {

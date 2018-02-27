@@ -44,6 +44,7 @@ Use vw for sizing so that it works on different size screens*/
      X11. content center in viewport
      12. right arrow in hourly temp container (symbol)
 
+  ***Add wind dial classes***
 */
 
 /*----- 1. General rules -----*/
@@ -152,12 +153,12 @@ nav a:visited {
 
 nav a:hover {
  text-decoration: none;
- color: #6c4ddb;
+ color: #d8f;
 }
 
 nav a:active {
  text-decoration: none;
- color: #d8f;
+ color: #6c4ddb;
 }
 /*End Main Navigation Styling*/
 
@@ -196,6 +197,7 @@ h2 {
  border: 1px solid;
  border-radius: 15px;
  display: flex;
+ justify-content: space-around;
  padding: .1em;
 }
 
@@ -204,6 +206,7 @@ h2 {
  display: flex;
  flex-wrap: wrap;
  width: 65vw;
+ margin: 20px;
 }
 
 #current-temp {
@@ -250,6 +253,13 @@ h2 {
  margin: -.6em auto 0;
  z-index: 100;
 }
+
+/*Classes for rotating wind dial*/
+.n {
+
+}
+
+/*End of dial classes*/
 
 #wind-speed {
  position: absolute;
@@ -318,7 +328,7 @@ footer {
 }
 
 /* ----------------- 3. Large Screens: 414px / 20.7em --------------------
-Need to fix tile placement and even spaced, font size of nav links, and arrow and scrolling in hourly*/
+Need to fix arrow and scrolling in hourly*/
 
 @media screen and (min-width: 414px) {
  body>div {
@@ -347,8 +357,11 @@ Need to fix tile placement and even spaced, font size of nav links, and arrow an
  /*------3.b. Main navigavtion styling-----*/
  nav {
   position: relative;
-  font-size: 5vw;
   width: auto;
+ }
+
+ nav ul li {
+  font-size: 16px;
  }
 
  /*------3.c. Location Styling------*/
@@ -358,6 +371,7 @@ Need to fix tile placement and even spaced, font size of nav links, and arrow an
 
  #location-info {
   font-size: 1.3vw;
+  width: 100%;
  }
 
  /*------3.d. Current Weather------*/
@@ -378,7 +392,6 @@ Need to fix tile placement and even spaced, font size of nav links, and arrow an
 
  #wind, #temps, #video {
   background-color: rgba(200, 200, 200, .6);
-  margin: 0;
   border: 1px solid;
   border-radius: 15px;
   padding: .1em;
@@ -388,6 +401,10 @@ Need to fix tile placement and even spaced, font size of nav links, and arrow an
  }
 
  /*------3.d.1. Temperature Styling-----*/
+ #temps {
+  margin: 0px 85px 0px 0px;
+ }
+
  #temps > h2{
   padding-left: 3vw;
  }
@@ -417,6 +434,7 @@ Need to fix tile placement and even spaced, font size of nav links, and arrow an
  #video {
   flex-direction: column;
   align-items: center;
+  margin: 0;
  }
 
  #video img {
@@ -460,7 +478,7 @@ Need to fix tile placement and even spaced, font size of nav links, and arrow an
  }
 
  #arrow {
-
+  display: flex;
  }
 
  /*------Footer-------*/

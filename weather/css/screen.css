@@ -380,6 +380,7 @@ Need to fix arrow and scrolling in hourly*/
   justify-content: space-evenly;
   padding: 1em 0;
   width: auto;
+  /*space-evenly is only supported by firefox for now*/
  }
 
  #small-conditions {

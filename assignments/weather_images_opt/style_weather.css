@@ -1,0 +1,138 @@
+/*******General Rules******/
+body {
+ font-family: sans-serif;
+ font-size: 18px;
+ margin: 0;
+ padding: 0;
+}
+
+h1 {
+ font-size: 1.05em;
+ padding: 7px 0px 0px 5px;
+ color: #FFF;
+ margin-top: 0;
+}
+
+.page-header {
+ background-color: #000;
+ height: 35px;
+ margin: 0;
+}
+
+/******Page nav*****/
+.page-nav {
+ background-color: rgb(0, 0, 0);
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ z-index: 100;
+}
+
+.page-nav ul {
+ display: flex;
+ height: 1.75em;
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+.page-nav li {
+ display: flex;
+ justify-content: flex-start;
+ padding-left: 10px;
+}
+
+.page-nav a {
+ text-decoration: none;
+ color: #fff;
+ display: flex;
+ flex: 1;
+ justify-content: center;
+ align-items: center;
+}
+
+/*****Mobile First rules*****/
+.image {
+ margin: 1em 0;
+}
+
+.image img {
+ display: block;
+ width: 100%;
+ height: auto;
+}
+
+.image-caption2 {
+ padding: .25em .5em;
+ font-family: serif;
+ font-size: 90%;
+ background: rgba(0, 0, 0, .1);
+}
+
+.image-caption1 {
+ display: none;
+}
+
+.page-footer {
+ background-color: rgba(0, 0, 0, .8);
+ color: #fff;
+ padding: 0 .5em;
+ margin-bottom: 1.75em;
+}
+
+/*****Large Screen rules*****/
+/*******1100px / 61.1em******/
+
+@media (min-width: 415px) {
+ body {
+  font-size: 1.5vw;
+  max-width: 1100px;
+  margin: 0 auto;
+ }
+
+ .page-header {
+  width: auto;
+  height: auto;
+ }
+
+ .page-nav {
+  position: relative;
+  width: auto;
+ }
+
+ h1 {
+  font-size: 2em;
+  line-height: 1.05;
+  padding: 10px 0 10px 10px;
+  margin-bottom: -5px;
+ }
+
+ .main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+ .image {
+  max-width: 47%;
+ }
+
+ .image-caption1 {
+  display: block;
+  padding: .25em .5em;
+  font-family: serif;
+  font-size: 90%;
+  background: rgba(0, 0, 0, .1);
+ }
+
+ .image-caption1 ul li {
+  padding: 1px 0 1px 0;
+ }
+
+ .image-caption2 {
+  display: none;
+ }
+
+}

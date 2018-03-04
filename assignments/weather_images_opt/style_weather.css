@@ -63,11 +63,15 @@ h1 {
  height: auto;
 }
 
+.background-caption {
+ background: rgba(0, 0, 0, .1);
+}
+
 .image-caption2 {
- padding: .25em .5em;
+ margin: 0;
+ padding: 10px 40px;
  font-family: serif;
  font-size: 90%;
- background: rgba(0, 0, 0, .1);
 }
 
 .image-caption1 {
@@ -117,14 +121,19 @@ h1 {
 
  .image {
   max-width: 47%;
+  margin-bottom: 0;
+ }
+
+.background-caption {
+ background: rgba(0, 0, 0, .1);
  }
 
  .image-caption1 {
   display: block;
-  padding: .25em .5em;
+  margin: 0;
+  padding: 10px 40px;
   font-family: serif;
   font-size: 90%;
-  background: rgba(0, 0, 0, .1);
  }
 
  .image-caption1 ul li {

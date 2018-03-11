@@ -36,16 +36,17 @@ Use vw for sizing so that it works on different size screens*/
      X2. Nav bar to top
      X3. T/W/V in separate boxes
      X4. T/W/V in a single container
-     5. T/W/V aligned, same size, evenly distributed
+     X5. T/W/V aligned, same size, evenly distributed
      X6. T/W/V on same line
      X7. Hourly forecast in a box
      X8. Footer has a line above it
-     9. Things are sized
-     10. dial centered in container
+     X9. Things are sized
+     X10. dial centered in container
      X11. content center in viewport
      12. right arrow in hourly temp container (symbol)
 
-  ***Add wind dial classes***
+  ***Add background image classes***
+  ******Change the image sizes, opt them again and and add them to the this****
 */
 
 /*----- 1. General rules -----*/
@@ -76,6 +77,42 @@ h6 {
  font-family: Sansita, arial, sans-serif;
 }
 
+/*Classes for rotating wind dial*/
+
+.n {
+ transform: rotate(0deg);
+}
+
+.ne {
+ transform: rotate(45deg);
+}
+
+.e {
+ transform: rotate(90deg);
+}
+
+.se {
+ transform: rotate(135deg);
+}
+
+.s {
+ transform: rotate(180deg);
+}
+
+.sw {
+ transform: rotate(225deg);
+}
+
+.w {
+ transform: rotate(270deg);
+}
+
+.nw {
+ transform: rotate(315deg);
+}
+
+/*End of dial classes*/
+
 /*----- 2. Mobile first rules -----
 ---2.a Header layout and styling---*/
 
@@ -95,9 +132,11 @@ h6 {
  font-size: 1.75em;
  padding: 5px;
 }
+
 /*End Header layout and styles*/
 
 /*--2.b. Main Navigavtion Styling--*/
+
 nav ul li {
  list-style: none;
  color: #FFF;
@@ -112,25 +151,13 @@ north: font-size: smaller
 margin: .5em 0 0 0
 z-index: 100
  dial: add classes for the directions so that it moves. (0deg)
-
-hourly: nowrap
-overflow-x: scroll
-align-items: center
-list-style: none
-padding: .15em
-margin: .25em 0;
-height: 40px
-list items:
-flex: 0 0 auto
-padding: 0 .25em
-border-right: 1px solid #000
 */
 
 #main-nav ul {
-display: flex;
-justify-content: space-around;
-margin: 0;
-padding: 0;
+ display: flex;
+ justify-content: space-around;
+ margin: 0;
+ padding: 0;
 }
 
 nav {
@@ -161,9 +188,11 @@ nav a:active {
  text-decoration: none;
  color: #6c4ddb;
 }
+
 /*End Main Navigation Styling*/
 
 /*-----2.c. Location Styling ------*/
+
 h1 {
  margin: 0;
  padding-top: 5px;
@@ -177,19 +206,42 @@ h1 {
  font-size: 3.1vw;
  padding-left: 7px;
 }
+
 /*End location styles*/
 
 /*-----2.d. Current Weather------*/
+
 h2 {
  display: none;
 }
 
 #cur-weather {
- background-image: url("/weather/images/sunny-winter.jpg");
  background-size: cover;
+ background-position: center;
  background-color: rgba(200, 200, 200, .6);
  margin: .2em auto;
  border: 1px solid;
+}
+
+/***background image classes***/
+.clear {
+ background-image: url("/assignments/weather_images_opt/images/clear_small.jpg");
+}
+
+.rain {
+ background-image: url("/assignments/weather_images_opt/images/rain_small.jpg");
+}
+
+.cloud {
+ background-image: url("/assignments/weather_images_opt/images/clouds_small.jpg");
+}
+
+.snow {
+ background-image: url("/assignments/weather_images_opt/images/snow_small.jpg");
+}
+
+.fog {
+ background-image: url("/assignments/weather_images_opt/images/fog_small.jpg");
 }
 
 #small-conditions {
@@ -203,26 +255,30 @@ h2 {
 }
 
 /*----2.d.1 Temperature Styling----*/
+
 #temps {
  display: flex;
  flex-wrap: wrap;
- width: 65vw;
- margin: 20px;
+ align-items: center;
+ margin: 5px 15px 5px 10px;
+ max-width: 180px;
 }
 
 #current-temp {
  font-size: 4em;
  margin: 0;
- padding-left: 17px;
+ padding-left: 10px;
 }
 
 #high-temp {
+ display: inline-block;
  color: red;
  margin: 0;
- padding-left: 40px;
+ padding-left: 30px;
 }
 
 #low-temp {
+ display: inline-block;
  color: blue;
  margin: 0;
  padding-left: 25px;
@@ -230,21 +286,24 @@ h2 {
 
 #feels-like {
  margin: 0;
- padding-left: 30px;
+ padding-left: 20px;
 }
+
 /*End Temperature Styling*/
 
 /*----2.d.2. Wind Styling----*/
+
 #wind {
  display: flex;
  flex-flow: column nowrap;
  position: relative;
  text-align: center;
+ margin: 5px 0px;
 }
 
 #fixed-N {
  font-size: smaller;
- margin: 0;
+ margin: 0 0 3px 0px;
 }
 
 #dial {
@@ -255,14 +314,8 @@ h2 {
  z-index: 100;
 }
 
-/*Classes for rotating wind dial*/
-.n {
-
-}
-
-/*End of dial classes*/
-
 #wind-speed {
+ margin: 10px 0px;
  position: absolute;
  top: 30%;
  text-align: center;
@@ -280,9 +333,11 @@ h2 {
  font-size: .8em;
  margin: 0;
 }
+
 /*End Wind Styling*/
 
 /*----2.d.3 Video Styling----*/
+
 #video {
  background-color: rgba(200, 200, 200, .6);
  margin: .2em auto;
@@ -291,15 +346,17 @@ h2 {
 }
 
 #video-icon {
- width: 50vw;
- height: auto;
- margin: .1vw 0 .1vw 20vw;
+ display: flex;
+ justify-content: space-around;
+ margin: .1vw 0 .1vw 0vw;
  padding: .5vw 0 .2vw 0;
 }
+
 /*End Current Weather*/
 
 /*----2.e. Hourly Styling----
 how to make a horizontal slider scroll*/
+
 #hourly-list {
  background-color: rgba(200, 200, 200, .6);
  margin: .2em auto;
@@ -321,6 +378,7 @@ how to make a horizontal slider scroll*/
  padding: 0 .25em;
  border-right: 1px solid #000;
 }
+
 /*End Hourly Styling*/
 
 footer {
@@ -331,8 +389,8 @@ footer {
 /* ----------------- 3. Large Screens: 414px / 20.7em --------------------
 Need to fix arrow and scrolling in hourly*/
 
-@media screen and (min-width: 414px) {
- body>div {
+@media screen and (min-width: 834px) {
+ body > div {
   /*max screen size and line length is 1100px, good guideline
   If the screen is bigger, make the content centered at the max width of 1100px*/
   max-width: 1100px;
@@ -378,10 +436,31 @@ Need to fix arrow and scrolling in hourly*/
  /*------3.d. Current Weather------*/
  #cur-weather {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 1em 0;
   width: auto;
   /*space-evenly is only supported by firefox for now*/
+ }
+
+ /*Background image classes*/
+ .clear {
+  background-image: url("/assignments/weather_images_opt/images/clear_large.jpg");
+ }
+
+ .rain {
+  background-image: url("/assignments/weather_images_opt/images/rain_large.jpg");
+ }
+
+ .cloud {
+  background-image: url("/assignments/weather_images_opt/images/clouds_large.jpg");
+ }
+
+ .snow {
+  background-image: url("/assignments/weather_images_opt/images/snow_large.jpg");
+ }
+
+ .fog {
+  background-image: url("/assignments/weather_images_opt/images/fog_large.jpg");
  }
 
  #small-conditions {
@@ -392,7 +471,9 @@ Need to fix arrow and scrolling in hourly*/
   padding: 0;
  }
 
- #wind, #temps, #video {
+ #wind,
+ #temps,
+ #video {
   background-color: rgba(200, 200, 200, .6);
   border: 1px solid;
   border-radius: 15px;
@@ -404,39 +485,44 @@ Need to fix arrow and scrolling in hourly*/
 
  /*------3.d.1. Temperature Styling-----*/
  #temps {
-  margin: 0px 85px 0px 0px;
+  margin: 0 5vw 0 1vw;
+  max-width: 250px;
  }
 
- #temps > h2{
-  padding-left: 3vw;
+ #temps > h2 {
+  padding-left: 40px;
  }
 
  #current-temp {
-  padding-left: 2.7vw;
+  padding-left: 32px;
  }
 
  #high-temp {
-  padding-left: 4.65vw;
+  padding-left: 60px;
  }
 
  #low-temp {
-  padding-left: 25px;
  }
 
  #feels-like {
-  padding-left: 3.8vw;
+  padding-left: 50px;
  }
 
  /*-----3.d.2. Wind Styling-----*/
+ #wind {
+  margin: 0;
+ }
+
  #wind-speed {
-  top: 38%;
+  top: 40%;
  }
 
  /*------3.d.3. Video Styling-----*/
  #video {
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  margin: 0 1vw 0 5vw;
+  min-width: 250px;
  }
 
  #video img {
@@ -489,4 +575,3 @@ Need to fix arrow and scrolling in hourly*/
   margin-bottom: 7px;
  }
 }
-

@@ -89,32 +89,34 @@ function windDial(direction) {
 }
 
 //Variables to use in background image functions
-const CURWEATHER = "downpour"; //change this to test
-let weatherImage = getCondition(CURWEATHER);
+let curWeather = "Sunshine"; //change this to test
+let weatherImage = getCondition(curWeather);
 
 changeSummaryImage(weatherImage);
 
 //javascript function that will change all of it to lowercase so you don't need to check for upper or lower case
 //do two or three tests for each image (rain, clouds, clear, snow, fog)
 
-function getCondition(CURWEATHER) {
- if (CURWEATHER.includes("cloud") || CURWEATHER.includes("overcast")) {
+function getCondition(curWeather) {
+ curWeather = curWeather.toLowerCase();
+
+ if (curWeather.includes("cloud") || curWeather.includes("overcast")) {
   return 'cloud';
  }
 
- else if (CURWEATHER.includes('rain') || CURWEATHER.includes('damp')) {
+ else if (curWeather.includes('rain') || curWeather.includes('damp')) {
   return 'rain';
  }
 
- else if (CURWEATHER.includes('sun') || CURWEATHER.includes('clear')) {
+ else if (curWeather.includes('sun') || curWeather.includes('clear')) {
   return 'clear';
  }
 
- else if (CURWEATHER.includes('snow') || CURWEATHER.includes('cold')) {
+ else if (curWeather.includes('snow') || curWeather.includes('cold')) {
   return 'snow';
  }
 
- else if(CURWEATHER.includes('fog') || CURWEATHER.includes('hazy')) {
+ else if(curWeather.includes('fog') || curWeather.includes('hazy')) {
  return 'fog';
  }
 

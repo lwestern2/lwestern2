@@ -89,7 +89,7 @@ function windDial(direction) {
 }
 
 //Variables to use in background image functions
-const CURWEATHER = "raining"; //change this to test
+const CURWEATHER = "downpour"; //change this to test
 let weatherImage = getCondition(CURWEATHER);
 
 changeSummaryImage(weatherImage);
@@ -114,9 +114,12 @@ function getCondition(CURWEATHER) {
   return 'snow';
  }
 
- else(CURWEATHER.includes('fog') || CURWEATHER.includes('hazy'))
+ else if(CURWEATHER.includes('fog') || CURWEATHER.includes('hazy')) {
  return 'fog';
 
+
+ else
+  return 'clear';
 }
 
 function changeSummaryImage(weatherImage) {

@@ -389,7 +389,7 @@ footer {
 /* ----------------- 3. Large Screens: 414px / 20.7em --------------------
 Need to fix arrow and scrolling in hourly*/
 
-@media screen and (min-width: 834px) {
+@media screen and (min-width: 830px) {
  body > div {
   /*max screen size and line length is 1100px, good guideline
   If the screen is bigger, make the content centered at the max width of 1100px*/

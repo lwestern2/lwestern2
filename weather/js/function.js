@@ -116,7 +116,7 @@ function getCondition(CURWEATHER) {
 
  else if(CURWEATHER.includes('fog') || CURWEATHER.includes('hazy')) {
  return 'fog';
-
+ }
 
  else
   return 'clear';

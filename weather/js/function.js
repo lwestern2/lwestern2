@@ -9,7 +9,7 @@ const temp = 31;
 const speed = 5;
 buildWC(speed, temp);
 
-const direction = "WSW"; //Change this value to test it
+const direction = "NW"; //Change this value to test it
 windDial(direction);
 
 

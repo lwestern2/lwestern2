@@ -77,6 +77,10 @@ h6 {
  font-family: Sansita, arial, sans-serif;
 }
 
+.hide {
+ display: none;
+}
+
 /*Classes for rotating wind dial*/
 
 .n {
@@ -345,7 +349,7 @@ h2 {
  border-radius: 15px;
 }
 
-#video-icon {
+#condition-icon {
  display: flex;
  justify-content: space-around;
  margin: .1vw 0 .1vw 0vw;
@@ -529,7 +533,7 @@ Need to fix arrow and scrolling in hourly*/
   width: 200px;
  }
 
- #video-icon {
+ #condition-icon {
   position: relative;
   width: auto;
   margin: 0;
@@ -545,12 +549,14 @@ Need to fix arrow and scrolling in hourly*/
   align-items: center;
   padding: .15em;
   margin: .25em 0;
-  height: 90px;
+  height: 100px;
  }
 
  #hourly > h2 {
-  font-size: 20px;
+  font-size: 25px;
   margin-left: 5px;
+  margin-top: 0;
+  padding: 3px;
  }
 
  #hourly-list {
@@ -558,14 +564,18 @@ Need to fix arrow and scrolling in hourly*/
   margin: 0;
   border: 0;
   border-radius: 0;
-  overflow-x: hidden;
   display: flex;
   padding: 0;
   margin: 0;
  }
 
  #arrow {
-  display: flex;
+   font-size: 50px;
+   z-index: 100;
+   margin-top: 0;
+   margin-bottom: 10px;
+   vertical-align: top;
+   visibility: visible;
  }
 
  /*------Footer-------*/

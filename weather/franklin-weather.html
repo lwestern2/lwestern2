@@ -10,95 +10,96 @@
 </head>
 
 <body>
-<div>
- <header id="page-header">
-  <div id="logo">&#9748;</div>
-  <h1 id="site-brand">The Weather Site</h1>
- </header>
+ <div>
+  <header id="page-header">
+   <div id="logo">&#9748;</div>
+   <h1 id="site-brand">The Weather Site</h1>
+  </header>
 
- <main>
-  <nav id="main-nav">
-   <ul>
-    <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a></li>
-    <li>Search</li>
-    <li><a href="/weather/franklin-weather.html" title="Go to Franklin, ID weather">Franklin</a></li>
-    <li><a href="/weather/greenville-weather.html" title="Go to Greenville, SC weather page">Greenville</a></li>
-    <li>Springfield</li>
-   </ul>
-  </nav>
+  <main>
+   <nav id="main-nav">
+    <ul>
+     <li><a href="https://lwestern2.github.io/" title="Go to home page">Home</a></li>
+     <li><a href="index.html" title="Go to current location weather">Current</a></li>
+     <li>Search</li>
+     <li><a href="/weather/franklin-weather.html" title="Go to Franklin, ID weather">Franklin</a></li>
+     <li><a href="/weather/greenville-weather.html" title="Go to Greenville, SC weather page">Greenville</a></li>
+     <li>Springfield</li>
+    </ul>
+   </nav>
 
-  <h1>Franklin, Idaho</h1>
-  <div id="location-info">
-   <p><b>Zip</b>: 83237 | <b>Elevation</b>: 4501 ft. | <b>Location</b>: 42.0135&deg; N, 111.8072&deg; W</p>
-  </div>
+   <h1>Franklin, Idaho</h1>
+   <div id="location-info">
+    <p><b>Zip</b>: 83237 | <b>Elevation</b>: 4501 ft. | <b>Location</b>: 42.0135&deg; N, 111.8072&deg; W</p>
+   </div>
 
-  <div id="cur-weather" class="snow">
-   <div id="small-conditions">
-    <section id="temps">
-     <h2>Temperature</h2>
-     <p id="current-temp"><strong>24&deg;F</strong></p>
-     <p id="high-temp">34&deg;F</p>
-     <p id="low-temp">21&deg;F</p>
-     <p id="feels-like"></p>
-    </section>
+   <div id="cur-weather" class="snow">
+    <div id="small-conditions">
+     <section id="temps">
+      <h2>Temperature</h2>
+      <p id="current-temp"><strong>24&deg;F</strong></p>
+      <p id="high-temp">34&deg;F</p>
+      <p id="low-temp">21&deg;F</p>
+      <p id="feels-like"></p>
+     </section>
 
-    <section id="wind">
-     <h2 id="wind-head">Wind</h2>
-     <p id="fixed-N">N</p>
-     <div id="dial" class="sw">
-     </div>
-     <div id="wind-info">
-      <p id="wind-speed">2 mph</p>
-      <p id="wind-direction"><b>Direction:</b> NW</p>
-      <p id="wind-gust"><b>Gusts:</b> 5mph</p>
+     <section id="wind">
+      <h2 id="wind-head">Wind</h2>
+      <p id="fixed-N">N</p>
+      <div id="dial" class="sw">
+      </div>
+      <div id="wind-info">
+       <p id="wind-speed">2 mph</p>
+       <p id="wind-direction"><b>Direction:</b> NW</p>
+       <p id="wind-gust"><b>Gusts:</b> 5mph</p>
+      </div>
+     </section>
+    </div>
+
+    <section id="video">
+     <h2>Video Forecast</h2>
+     <div id="video-icon">
+      <img src=/weather/images/video.png alt="video player icon">
      </div>
     </section>
    </div>
 
-   <section id="video">
-    <h2>Video Forecast</h2>
-    <div id="video-icon">
-    <img src=/weather/images/video.png alt="video player icon">
-    </div>
+   <section id="hourly">
+    <h2>Hourly Forecast</h2>
+    <ul id="hourly-list">
+     <li>12am: 21&deg;F</li>
+     <li>1am: 21&deg;F</li>
+     <li>2am: 21&deg;F</li>
+     <li>3am: 20&deg;F</li>
+     <li>4am: 20&deg;F</li>
+     <li>5am: 20&deg;F</li>
+     <li>6am: 20&deg;F</li>
+     <li>7am: 21&deg;F</li>
+     <li>8am: 25&deg;F</li>
+     <li>9am: 28&deg;F</li>
+     <li>10am: 30&deg;F</li>
+     <li>11am: 34&deg;F</li>
+     <li>12pm: 35&deg;F</li>
+     <li>1pm: 37&deg;F</li>
+     <li>2pm: 38&deg;F</li>
+     <li>3pm: 39&deg;F</li>
+     <li>4pm: 39&deg;F</li>
+     <li>5pm: 38&deg;F</li>
+     <li>6pm: 36&deg;F</li>
+     <li>7pm: 34&deg;F</li>
+     <li>8pm: 33&deg;F</li>
+     <li>9pm: 33&deg;F</li>
+     <li>10pm: 31&deg;F</li>
+     <li>11pm: 31&deg;F</li>
+    </ul>
+<!--    <p id="arrow">&rsaquo;</p>-->
    </section>
-  </div>
+   <div id="line"></div>
+  </main>
 
-  <section id="hourly">
-   <h2>Hourly Forecast</h2>
-   <ul id="hourly-list">
-    <li>12am: 21&deg;F</li>
-    <li>1am: 21&deg;F</li>
-    <li>2am: 21&deg;F</li>
-    <li>3am: 20&deg;F</li>
-    <li>4am: 20&deg;F</li>
-    <li>5am: 20&deg;F</li>
-    <li>6am: 20&deg;F</li>
-    <li>7am: 21&deg;F</li>
-    <li>8am: 25&deg;F</li>
-    <li>9am: 28&deg;F</li>
-    <li>10am: 30&deg;F</li>
-    <li>11am: 34&deg;F</li>
-    <li>12pm: 35&deg;F</li>
-    <li>1pm: 37&deg;F</li>
-    <li>2pm: 38&deg;F</li>
-    <li>3pm: 39&deg;F</li>
-    <li>4pm: 39&deg;F</li>
-    <li>5pm: 38&deg;F</li>
-    <li>6pm: 36&deg;F</li>
-    <li>7pm: 34&deg;F</li>
-    <li>8pm: 33&deg;F</li>
-    <li>9pm: 33&deg;F</li>
-    <li>10pm: 31&deg;F</li>
-    <li>11pm: 31&deg;F</li>
-   </ul>
-<!--   <div id="arrow">&rsaquo;</div>-->
-  </section>
-  <div id="line"></div>
- </main>
-
- <footer>
-  &copy; 2018 Weather Site
- </footer>
+  <footer>
+   &copy; 2018 Weather Site
+  </footer>
  </div>
  <script src="/weather/js/function.js"></script>
 </body>

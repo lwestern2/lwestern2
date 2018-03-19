@@ -81,6 +81,15 @@ h6 {
  display: none;
 }
 
+.show {
+ display: block;
+}
+
+#status {
+ text-align: center;
+ font-size: 2vw;
+}
+
 /*Classes for rotating wind dial*/
 
 .n {

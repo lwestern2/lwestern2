@@ -4,8 +4,6 @@
 
 
 
-const STATUS = document.getElementById('status');
-STATUS.innerHTML = 'Getting Location...';
 
 // Calculate the Windchill
 function buildWC(speed, temp) {

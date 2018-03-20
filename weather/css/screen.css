@@ -77,17 +77,16 @@ h6 {
  font-family: Sansita, arial, sans-serif;
 }
 
-.hide {
+.hide{
  display: none;
 }
 
-.show {
- display: block;
+.body .hide{
+ display:block;
 }
 
-#status {
- text-align: center;
- font-size: 2vw;
+#noStatus {
+ display: none;
 }
 
 /*Classes for rotating wind dial*/
@@ -359,10 +358,10 @@ h2 {
 }
 
 #condition-icon {
- display: flex;
- justify-content: space-around;
- margin: .1vw 0 .1vw 0vw;
- padding: .5vw 0 .2vw 0;
+ display: block;
+ width: 200px;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 /*End Current Weather*/
@@ -385,7 +384,7 @@ how to make a horizontal slider scroll*/
 }
 
 #hourly-list li {
- display: flex;
+ display: block;
  list-style: none;
  flex: 0 0 auto;
  padding: 0 .25em;
@@ -397,6 +396,9 @@ how to make a horizontal slider scroll*/
 footer {
  background-color: #0e89d5;
  margin-bottom: 2em;
+ display: flex;
+ align-items: flex-end;
+ flex-wrap: wrap;
 }
 
 /* ----------------- 3. Large Screens: 414px / 20.7em --------------------
@@ -527,7 +529,7 @@ Need to fix arrow and scrolling in hourly*/
  }
 
  #wind-speed {
-  top: 40%;
+  top: 42%;
  }
 
  /*------3.d.3. Video Styling-----*/
@@ -538,14 +540,8 @@ Need to fix arrow and scrolling in hourly*/
   min-width: 250px;
  }
 
- #video img {
-  width: 200px;
- }
-
  #condition-icon {
-  position: relative;
-  width: auto;
-  margin: 0;
+  display: flex;
  }
 
  /*-----3.e. Hourly Styling-----*/
@@ -588,6 +584,9 @@ Need to fix arrow and scrolling in hourly*/
  }
 
  /*------Footer-------*/
+ footer {
+  margin: 0;
+ }
  #line {
   border: 1.5px solid #000;
   margin-top: 15px;

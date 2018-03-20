@@ -129,7 +129,7 @@ function changeSummaryImage(weatherImage) {
 // Get Data from API
 function getData(LOCALE) {
  const WU_API_KEY = 'a648268d6c5ab2de';
- const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
+ const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/forecast/hourly/q/" + LOCALE + ".json";
 
  fetch(URL)
   .then(response => response.json())
@@ -201,14 +201,14 @@ function displayData(data) {
 
  // Task 3 - Populate weather information and rest of the info (including the wunderground logo and text in footer)
  //Get and display high temp
-// const high = data.forecast.simpleforecast.forecastday[0].high.fahrenheit
-// console.log(high);
-// document.getElementById("high-temp").innerHTML = Math.round(high)+'&deg;F';
+ const high = data.forecast.simpleforecast.forecastday[0].high.fahrenheit
+ console.log(high);
+ document.getElementById("high-temp").innerHTML = Math.round(high)+'&deg;F';
 
-// //Get and display low temp
-// let low = data.forecast.simpleforecast.forecastday["0"].low.fahrenheit;
-// console.log(low);
-// document.getElementById("low-temp").innerHTML = Math.round(low)+'&deg;F';
+ //Get and display low temp
+ let low = data.forecast.simpleforecast.forecastday["0"].low.fahrenheit;
+ console.log(low);
+ document.getElementById("low-temp").innerHTML = Math.round(low)+'&deg;F';
 
  //Get and display video title
  let titleVideo = data.current_observation.weather;
@@ -225,12 +225,12 @@ function displayData(data) {
  document.getElementById("gust").innerHTML = gust + " mph";
 
  // Task 4 - Hide status and show main
- //hide status
- let idStatus = document.getElementById('status');
- idStatus.setAttribute('class', 'hide');
- //show loaded content
- let hide = document.getElementById("content");
- hide.setAttribute("class", "show");
+ //show and hide status
+ const noStatus=document.getElementById("status");
+ noStatus.setAttribute("id", "noStatus")
+ //show and hide content
+ const hide = document.getElementById("hideUnhide");
+ hide.setAttribute("class", "notHide");
 
  //Hourly forecast
  let hourlyTemp = []
@@ -240,8 +240,8 @@ function displayData(data) {
  }
 
  //Display
- let zero = document.getElementById("zero").innerHTML = hourlyTemp[0]+'&deg;F';
- let one = document.getElementById("one").innerHTML = hourlyTemp[1]+'&deg;F';
+ let zero = document.getElementById("zero").innerHTML = " " + hourlyTemp[0] + '&deg;F';
+ let one = document.getElementById("one").innerHTML = " " + hourlyTemp[1] + '&deg;F';
  let two = document.getElementById("two").innerHTML = hourlyTemp[2]+'&deg;F';
  let three = document.getElementById("three").innerHTML = hourlyTemp[3]+'&deg;F';
  let four = document.getElementById("four").innerHTML = hourlyTemp[4]+'&deg;F';

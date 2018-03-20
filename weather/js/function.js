@@ -182,6 +182,11 @@ function displayData(data) {
  console.log(cityState);
  document.getElementById("cityState").innerHTML = cityState;
 
+ //Get and display city for title element
+ let pageTitle = data.current_observation.display_location.full;
+ console.log(pageTitle);
+ document.getElementById("page-title").innerHTML = pageTitle + " Weather";
+
  //Get and display zip
  let zip = data.current_observation.display_location.zip;
  console.log(zip);

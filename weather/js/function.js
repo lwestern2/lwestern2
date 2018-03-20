@@ -148,12 +148,12 @@ function displayData(data) {
  //Get and display current temp
  let temp = data.current_observation.temp_f;
  console.log(temp);
- document.getElementById("current-temp").innerHTML = Math.round(temp)+'&deg;F';
+ document.getElementById("current-temp").innerHTML = Math.round(temp) + '&deg;F';
 
  //Get and display wind speed
  let speed = data.current_observation.wind_mph;
  console.log(speed);
- document.getElementById("wind-speed").innerHTML = speed+ " mph";
+ document.getElementById("wind-speed").innerHTML = speed + " mph";
 
  //Wind chill - call function
  buildWC(speed, temp);
@@ -190,10 +190,10 @@ function displayData(data) {
  //Get and display zip
  let zip = data.current_observation.display_location.zip;
  console.log(zip);
- document.getElementById('zip').innerHTML = zip;
+ document.getElementById("zip").innerHTML = zip;
 
  //Get and display elevation
- let elevation=data.current_observation.display_location.elevation;
+ let elevation = data.current_observation.display_location.elevation;
  console.log(elevation);
  document.getElementById("elevation").innerHTML = Math.round(elevation * 3.28);
 
@@ -202,27 +202,27 @@ function displayData(data) {
  console.log(lat);
  let long = data.current_observation.display_location.longitude;
  console.log(long);
- document.getElementById('location').innerHTML = long + ', ' + lat;
+ document.getElementById("location").innerHTML = long + ', ' + lat;
 
  // Task 3 - Populate weather information and rest of the info (including the wunderground logo and text in footer)
  //Get and display high temp
  const high = data.forecast.simpleforecast.forecastday[0].high.fahrenheit
  console.log(high);
- document.getElementById("high-temp").innerHTML = Math.round(high)+'&deg;F';
+ document.getElementById("high-temp").innerHTML = Math.round(high) + '&deg;F';
 
  //Get and display low temp
  let low = data.forecast.simpleforecast.forecastday["0"].low.fahrenheit;
  console.log(low);
- document.getElementById("low-temp").innerHTML = Math.round(low)+'&deg;F';
+ document.getElementById("low-temp").innerHTML = Math.round(low) + '&deg;F';
 
  //Get and display video title
  let titleVideo = data.current_observation.weather;
  console.log(titleVideo);
- document.getElementById('condition').innerHTML = titleVideo;
+ document.getElementById("condition").innerHTML = titleVideo;
 
  //Get and display weather video Icon
  let videoIcon = data.current_observation.icon_url;
- document.getElementById('condition-icon').src = videoIcon;
+ document.getElementById("condition-icon").src = videoIcon;
 
  //Get and display wind gusts
  let gust = data.current_observation.wind_gust_mph;
@@ -231,7 +231,7 @@ function displayData(data) {
 
  // Task 4 - Hide status and show main
  //show and hide status
- const noStatus=document.getElementById("status");
+ const noStatus = document.getElementById("status");
  noStatus.setAttribute("id", "noStatus")
  //show and hide content
  const hide = document.getElementById("hideUnhide");
@@ -239,36 +239,36 @@ function displayData(data) {
 
  //Hourly forecast
  let hourlyTemp = []
- for (let i = 0; i < 24; i++){
+ for (let i = 0; i < 24; i++) {
   hourlyTemp[i] = data.hourly_forecast[i].temp.english;
   console.log(hourlyTemp);
  }
 
  //Display
- let zero = document.getElementById("zero").innerHTML = " " + hourlyTemp[0] + '&deg;F';
- let one = document.getElementById("one").innerHTML = " " + hourlyTemp[1] + '&deg;F';
- let two = document.getElementById("two").innerHTML = hourlyTemp[2]+'&deg;F';
- let three = document.getElementById("three").innerHTML = hourlyTemp[3]+'&deg;F';
- let four = document.getElementById("four").innerHTML = hourlyTemp[4]+'&deg;F';
- let five = document.getElementById("five").innerHTML = hourlyTemp[5]+'&deg;F';
- let six = document.getElementById("six").innerHTML = hourlyTemp[6]+'&deg;F';
- let seven = document.getElementById("seven").innerHTML = hourlyTemp[7]+'&deg;F';
- let eight = document.getElementById("eight").innerHTML = hourlyTemp[8]+'&deg;F';
- let nine  = document.getElementById("nine").innerHTML = hourlyTemp[9]+'&deg;F';
- let ten = document.getElementById("ten").innerHTML = hourlyTemp[10]+'&deg;F';
- let eleven = document.getElementById("eleven").innerHTML = hourlyTemp[11]+'&deg;F';
- let twelve = document.getElementById("twelve").innerHTML = hourlyTemp[12]+'&deg;F';
- let thirteen = document.getElementById("thirteen").innerHTML = hourlyTemp[13]+'&deg;F';
- let fourteen = document.getElementById("fourteen").innerHTML = hourlyTemp[14]+'&deg;F';
- let fifteen = document.getElementById("fifteen").innerHTML = hourlyTemp[15]+'&deg;F';
- let sixteen = document.getElementById("sixteen").innerHTML = hourlyTemp[16]+'&deg;F';
- let seventeen = document.getElementById("seventeen").innerHTML = hourlyTemp[17]+'&deg;F';
- let eighteen = document.getElementById("eighteen").innerHTML = hourlyTemp[18]+'&deg;F';
- let nineteen = document.getElementById("nineteen").innerHTML = hourlyTemp[19]+'&deg;F';
- let twenty = document.getElementById("twenty").innerHTML = hourlyTemp[20]+'&deg;F';
- let twentyone = document.getElementById("twentyone").innerHTML = hourlyTemp[21]+'&deg;F';
- let twentytwo = document.getElementById("twentytwo").innerHTML = hourlyTemp[22]+'&deg;F';
- let twentythree = document.getElementById("twentythree").innerHTML = hourlyTemp[23]+'&deg;F';
+ let zero = document.getElementById("zero").innerHTML = hourlyTemp[0] + '&deg;F';
+ let one = document.getElementById("one").innerHTML = hourlyTemp[1] + '&deg;F';
+ let two = document.getElementById("two").innerHTML = hourlyTemp[2] + '&deg;F';
+ let three = document.getElementById("three").innerHTML = hourlyTemp[3] + '&deg;F';
+ let four = document.getElementById("four").innerHTML = hourlyTemp[4] + '&deg;F';
+ let five = document.getElementById("five").innerHTML = hourlyTemp[5] + '&deg;F';
+ let six = document.getElementById("six").innerHTML = hourlyTemp[6] + '&deg;F';
+ let seven = document.getElementById("seven").innerHTML = hourlyTemp[7] + '&deg;F';
+ let eight = document.getElementById("eight").innerHTML = hourlyTemp[8] + '&deg;F';
+ let nine = document.getElementById("nine").innerHTML = hourlyTemp[9] + '&deg;F';
+ let ten = document.getElementById("ten").innerHTML = hourlyTemp[10] + '&deg;F';
+ let eleven = document.getElementById("eleven").innerHTML = hourlyTemp[11] + '&deg;F';
+ let twelve = document.getElementById("twelve").innerHTML = hourlyTemp[12] + '&deg;F';
+ let thirteen = document.getElementById("thirteen").innerHTML = hourlyTemp[13] + '&deg;F';
+ let fourteen = document.getElementById("fourteen").innerHTML = hourlyTemp[14] + '&deg;F';
+ let fifteen = document.getElementById("fifteen").innerHTML = hourlyTemp[15] + '&deg;F';
+ let sixteen = document.getElementById("sixteen").innerHTML = hourlyTemp[16] + '&deg;F';
+ let seventeen = document.getElementById("seventeen").innerHTML = hourlyTemp[17] + '&deg;F';
+ let eighteen = document.getElementById("eighteen").innerHTML = hourlyTemp[18] + '&deg;F';
+ let nineteen = document.getElementById("nineteen").innerHTML = hourlyTemp[19] + '&deg;F';
+ let twenty = document.getElementById("twenty").innerHTML = hourlyTemp[20] + '&deg;F';
+ let twentyone = document.getElementById("twentyone").innerHTML = hourlyTemp[21] + '&deg;F';
+ let twentytwo = document.getElementById("twentytwo").innerHTML = hourlyTemp[22] + '&deg;F';
+ let twentythree = document.getElementById("twentythree").innerHTML = hourlyTemp[23] + '&deg;F';
 }
 
 //copy all the stuff from the underground weather site and put it into the json editor online, it will then show me what I actually got. It returns it as a json object and then two sub-objects

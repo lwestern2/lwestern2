@@ -281,3 +281,10 @@ function displayData(data) {
 
 //wunderground.com key
 //a648268d6c5ab2de
+
+/****search tool assessment - keyup event listener
+//want the in javascript, using the addEventListener() method
+//object(div).addEventListener("keyup", function);
+//only returns 20 results when you start typing
+//listening for the click on one of the links from the search bar results
+//use the bubbling and capture so that you only have to write one event listener and it works for all of them (add listener to <ul>)

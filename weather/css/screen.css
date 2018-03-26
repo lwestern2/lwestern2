@@ -97,7 +97,7 @@ h6 {
 
 /*add some space around the search bar*/
 #searchBar {
- padding-bottom: 20px;
+ padding-bottom: 1em;
 }
 
 /*Classes for rotating wind dial*/

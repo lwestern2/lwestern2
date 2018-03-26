@@ -40,6 +40,7 @@ function processJSON(json) {
  searchResults.innerHTML = list;
 } // ends the processJSON function
 
+//Function to keep search location on my website
 let search = document.getElementById("searchResults");
 
 search.addEventListener("click", function() {

@@ -3,7 +3,7 @@
 
  <head>
   <meta charset="UTF-8">
-  <title id="page-title">Current Weather Location</title>
+  <title id="page-title">Search Weather Location</title>
   <meta name="Current Location" content="The current weather information for you current location from The Weather Site. Current, High and low temperatures, Wind, Hourly forecast.">
   <meta name="viewport" content="width=device-width">
   <link href="/weather/css/screen.css" rel="stylesheet" type="text/css" media="screen">
@@ -28,9 +28,7 @@
     </ul>
    </nav>
 
-   <p id="status"></p>
-
-   <section>
+   <section id="searchBar">
     <form method="get" action="https://wunderground.com/" id="searchform">
      <input type="search" name="query" id="query">
      <input type="submit" name="submit" value="Search" id="send">
@@ -38,7 +36,9 @@
     <div id="searchResults"></div>
    </section>
 
-   <main id="hideUnhide" class="hide">
+   <p id="status" class="hide"></p>
+
+   <main id="hideUnhide" class="hidden">
     <h1 id="cityState">Current Location</h1>
     <div id="location-info">
      <p><b>Zip:</b> <span id="zip"></span> | <b>Elevation:</b> <span id="elevation"></span> | <b>Location:</b> <span id="location"></span></p>

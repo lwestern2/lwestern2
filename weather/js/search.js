@@ -49,5 +49,11 @@ search.addEventListener("click", function() {
  console.log(locationCity);
 
  getData(locationCity);
+
+ document.getElementById("searchResults").style.display = "none";
+
+ document.getElementById("searchform").addEventListener("click", function() {
+  document.getElementById("searchResults").style.display = "block";
+ });
 });
 

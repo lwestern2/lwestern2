@@ -77,6 +77,10 @@ h6 {
  font-family: Sansita, arial, sans-serif;
 }
 
+.hidden {
+ display: none;
+}
+
 .hide{
  display: none;
 }
@@ -87,6 +91,10 @@ h6 {
 
 #noStatus {
  display: none;
+}
+
+#searchBar {
+ padding-bottom: 20px;
 }
 
 /*Classes for rotating wind dial*/
@@ -587,6 +595,7 @@ Need to fix arrow and scrolling in hourly*/
  footer {
   margin: 0;
  }
+
  #line {
   border: 1.5px solid #000;
   margin-top: 15px;

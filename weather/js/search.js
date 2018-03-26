@@ -50,8 +50,10 @@ search.addEventListener("click", function() {
 
  getData(locationCity);
 
+//Hide the search results
  document.getElementById("searchResults").style.display = "none";
 
+ //show again when the user types something else in the search bar
  document.getElementById("searchform").addEventListener("click", function() {
   document.getElementById("searchResults").style.display = "block";
  });

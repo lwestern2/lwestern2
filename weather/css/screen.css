@@ -77,10 +77,12 @@ h6 {
  font-family: Sansita, arial, sans-serif;
 }
 
+/*hides the main content on the search page*/
 .hidden {
  display: none;
 }
 
+/*hiding and showing the 'getting location' and then main content on the current weather page*/
 .hide{
  display: none;
 }
@@ -93,6 +95,7 @@ h6 {
  display: none;
 }
 
+/*add some space around the search bar*/
 #searchBar {
  padding-bottom: 20px;
 }

@@ -40,29 +40,14 @@ function processJSON(json) {
  searchResults.innerHTML = list;
 } // ends the processJSON function
 
-
 let search = document.getElementById("searchResults");
 
-search.addEventListener("click", function (event) {
- let loc = event.target.dataset.location;
+search.addEventListener("click", function() {
+ let locationCity = event.target.dataset.location;
  event.preventDefault();
 
- console.log(loc);
+ console.log(locationCity);
 
- getData(loc);
-
+ getData(locationCity);
 });
 
-//const SEARCH = document.getElementById("searchResults");
-//
-//SEARCH.addEventListener("click", function () {
-//
-// // get the links data
-// let locationCity = event.target.dataset.location;
-//
-// // log what data is received
-// console.log(locationCity);
-//
-// // place data from locationCity into the getData function
-// getData(locationCity);
-//});

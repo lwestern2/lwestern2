@@ -1,0 +1,373 @@
+/*This is my screen file for the Acme page
+Most of these comments are for myself*/
+
+/*Imports first - normalize css stylesheet*/
+
+@import url('normalize.css');
+
+/*------------Table of Contents--------
+1. General Rules
+2. Mobile First Rules
+ 2.a. Header layout
+ 2.b. Main Nav
+ 2.c. Main Body Styling - Home Page
+ 2.d. Content pages
+ 2.e. Footer Layout
+3. Medium Screen Rules (650px-1000px)
+ 3.a Main Body Styling
+ 3.b Fotter Layout
+4. Large Screens Rules (1000px and up)
+ 4.a. Header layout
+ 4.b. Main Nav
+ 4.c. Main Body Styling
+*/
+
+/*---1. General Ruls ---*/
+
+* {
+ box-sizing: border-box;
+ /* changes width property
+ to total width instead of content width */
+}
+
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+body {
+ font-family: helvetica, arial, sans-serif;
+ /* body font */
+ font-size: 18px;
+ margin-bottom: 100%;
+ padding: 0;
+ background-image: url(/acme/images/site/background.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+body > div {
+ margin: 0 auto;
+ background-color: #FFF;
+ margin-left: 3vw;
+ margin-right: 3vw;
+ margin-bottom: 3vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family: Sansita, arial, sans-serif;
+}
+
+.hide {
+ display: none;
+}
+
+/*---- 2. Mobile First RuleS ----
+--- 2.a. Header Layout --------*/
+
+#page-header {
+ display: flex;
+ align-items: center;
+ padding-bottom: 10px;
+ padding-left: 10px;
+}
+
+#site-logo {
+ width: 70%;
+}
+
+/*---- 2.b. Main Nav ----*/
+
+#acmeNav {
+ padding: 10px 5px;
+ font-size: 30px;
+ width: 100%;
+ display: flex;
+ list-style: none;
+}
+
+#acmeNav ul {
+ margin-left: 0;
+ margin-bottom: 0;
+ margin-top: 0;
+ padding-top: 1vw;
+ padding-bottom: 1vw;
+ padding-left: 10px;
+ background-color: #de2226;
+ flex-wrap: nowrap;
+}
+
+#acmeNav ul li {
+ padding-right: 2vw;
+ color: #FFF;
+ font-weight: 200;
+}
+
+#acmeNav a {
+ text-decoration: none;
+ color: #FFF;
+}
+
+#acmeNav a:hover {
+ color: #de2226;
+ background-color: #FFF;
+ padding: .4em .3em;
+}
+
+/*---- 2.c. Main Body Styling - Home Page ----*/
+
+#main-content-title {
+ margin: 0;
+}
+
+/*--Top Banner image--*/
+#banner {
+ background-image: url(/acme/images/site/feature.jpg);
+ background-size: 100%;
+ background-repeat: no-repeat;
+ display: flex;
+ justify-content: flex-end;
+}
+
+#banner-list {
+ height: 45vw;
+ list-style: none;
+ color: #de2226;
+ margin-right: 5px;
+ margin-top: 2px;
+ margin-bottom: 0;
+ padding: 0;
+}
+
+#banner-list h2 {
+ margin: 0;
+ font-size: 1.3em;
+ font-weight: bold;
+}
+
+#banner-list li {
+ padding-bottom: 3px;
+ width: 200px;
+ font-size: 16px;
+}
+
+#actionbtn {
+ width: 200px;
+}
+
+/*--bottom section--*/
+
+#review-recipes h2 {
+ font-size: 1.5em;
+}
+
+/*--Reviews--*/
+#review-list {
+ font-size: 1.2em;
+}
+
+#review-list li {
+ padding-bottom: 5px;
+}
+
+/*--Recipes--*/
+#recipes {
+ margin-left: 5px;
+}
+
+#recipes h2 {
+ margin-bottom: 0;
+}
+
+#thumbnails {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.img-thumbnails {
+ background-color: #808080;
+ margin: 5px 5px 50px 0px;
+ width: 140px;
+ height: 95px;
+}
+
+.img-thumbnails img {
+ position: relative;
+ left: 18%;
+ height: 90px;
+}
+
+.cap {
+ padding-top: 3px;
+ color: #0000ee;
+ text-decoration: underline;
+ text-align: center;
+}
+
+/*---- 2.d. Content pages ----*/
+#products {
+ margin: .2em;
+ font-size: 1.5em;
+}
+
+# info{
+ display: block;
+ flex-direction: row;
+ align-items: flex-start
+}
+
+#product-image {
+ margin-right: 1em;
+}
+
+#right ul{
+ list-style: none;
+ padding-left: 0;
+}
+
+#product-price {
+ margin-top: 2em;
+ color: #de2226;
+ font-size: 2em;
+}
+
+/*---- 2.e. Footer Layout ----*/
+
+#site-footer {
+ border-top: 3px solid #000;
+ margin-left: 10px;
+ margin-right: 10px;
+ text-align: center;
+}
+
+/*------------- 3. Medium screen Rules: 620px -------------*/
+
+@media screen and (min-width: 650px) {
+ /*---- 3.a. Main Body Layout ----*/
+
+ #main-content-title {
+  margin: 0;
+  font-size: 2.5em;
+ }
+
+ /*---Top banner image---*/
+ #banner-list {
+  height: 40vw;
+  font-size: 1.3em;
+  margin-right: 20px;
+  margin-top: 30px;
+ }
+
+ #banner-list h2 {
+  font-size: 2em;
+ }
+
+ #banner-list li {
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: inherit;
+  width: auto;
+ }
+
+ #actionbtn {
+  width: 301px;
+ }
+
+/*---bottom section---*/
+ #review-recipes h2 {
+  font-size: 2em;
+ }
+
+ /*---- 3.b. Footer Layout ----*/
+
+ #siteFooter {
+  font-size: 20px;
+ }
+
+/*------------- 4. Large Screen Rules: 1000px -------------*/
+
+@media screen and (min-width: 1000px) {
+
+ body {
+  margin-bottom: 0;
+ }
+
+ body > div {
+  max-width: 75em;
+ }
+
+ /*---- 4.a. Header Layout ----*/
+
+ #page-header {
+
+ }
+
+ #site-logo {
+  height: 30%;
+  width: 30%;
+ }
+
+ /*---- 4.b. Main Nav ----*/
+
+ nav {
+  background-color: #de2226;
+  padding-top: .1em;
+ }
+
+ nav ul li {
+  display: inline-block;
+  font-size: 6vw;
+  color: #FFF;
+  padding: .2em;
+ }
+
+ nav a:link, nav a:visited {
+  text-decoration: none;
+  color: #FFF;
+ }
+
+ nav li:hover, nav a:hover {
+  background-color: #FFF;
+  color: #de2226;
+  cursor:pointer;
+ }
+
+ /*---- 4.c. Main Body Styling ----*/
+
+ /*--Top Banner image--*/
+ #banner {
+  background-size: cover;
+ }
+
+ #banner-list {
+  height: 498px;
+ }
+
+ /*--bottom section--*/
+
+ #review-recipes {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+ }
+
+ /*--Recipes--*/
+ #recipes {
+  width: 30%;
+  margin-left: 10px;
+ }
+
+ .img-thumbnails {
+  margin: 5px 5px 40px 0px;
+  width: 170px;
+ }
+
+ .img-thumbnails img {
+  left: 23.5%;
+ }
+}

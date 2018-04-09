@@ -45,9 +45,7 @@ function buildNav(data) {
    //show home page, hide content pages
    document.getElementById("main-content").setAttribute("class", "show");
    document.getElementById("products").setAttribute("class", "hide");
-  }
-
-  else if (linkClicked == "Anvils") {
+  } else if (linkClicked == "Anvils") {
    document.getElementById("page-title").innerHTML = "Anvils | Acme.Inc";
 
    //hide the home page, show content page
@@ -66,9 +64,7 @@ function buildNav(data) {
    document.getElementById("review").innerHTML = data.Anvils.reviews + "/5 stars";
 
    document.getElementById("product-price").innerHTML = "Price: $" + data.Anvils.price;
-  }
-
-  else if (linkClicked == "Explosives") {
+  } else if (linkClicked == "Explosives") {
    document.getElementById("page-title").innerHTML = "Explosives | Acme.Inc";
 
    //hide the home page, show content page
@@ -87,9 +83,7 @@ function buildNav(data) {
    document.getElementById("review").innerHTML = data.Explosives.reviews + "/5 stars";
 
    document.getElementById("product-price").innerHTML = "Price: $" + data.Explosives.price;
-  }
-
-  else if (linkClicked == "Decoys") {
+  } else if (linkClicked == "Decoys") {
    document.getElementById("page-title").innerHTML = "Decoys | Acme.Inc";
 
    //hide the home page, show content page
@@ -108,9 +102,7 @@ function buildNav(data) {
    document.getElementById("review").innerHTML = data.Decoys.reviews + "/5 stars";
 
    document.getElementById("product-price").innerHTML = "Price: $" + data.Decoys.price;
-  }
-
-  else if (linkClicked == "Traps") {
+  } else if (linkClicked == "Traps") {
    document.getElementById("page-title").innerHTML = "Traps | Acme.Inc";
 
    //hide the home page, show content page

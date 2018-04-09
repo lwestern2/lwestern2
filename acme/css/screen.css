@@ -315,85 +315,86 @@ h6 {
  #siteFooter {
   font-size: 20px;
  }
+}
 
- /*------------- 4. Large Screen Rules: 1000px -------------*/
- @media screen and (min-width: 1000px) {
+/*------------- 4. Large Screen Rules: 1000px -------------*/
 
-  body {
-   margin-bottom: 0;
-  }
+@media screen and (min-width: 1000px) {
 
-  body > div {
-   max-width: 75em;
-  }
-
-  /*---- 4.a. Header Layout ----*/
-  #page-header {}
-
-  #site-logo {
-   width: 40%;
-  }
-
-  /*---- 4.b. Main Body Styling ----*/
-
-  #product-name {
-   font-size: 3em;
-  }
-
-  #info {
-   display: flex;
-  }
-
-  #product-image {
-   width: auto;
-   margin-right: 1em;
-   margin-left: 1em;
-  }
-
-  #product-descrip {
-   padding-right: .3em;
-  }
-
-  #product-price {
-   margin-top: 2em;
-   padding: 0;
-  }
-
-  /*--Top Banner image--*/
-  #banner {
-   background-size: cover;
-  }
-
-  #banner-list {
-   background-color: transparent;
-   height: 498px;
-  }
-
-  /*--bottom section--*/
-  #review-recipes {
-   display: flex;
-   flex-direction: row-reverse;
-   justify-content: flex-end;
-  }
-
-  /*--Recipes--*/
-  #recipes {
-   width: 30%;
-   margin-left: 10px;
-  }
-
-  .img-thumbnails {
-   margin: 5px 5px 40px 0px;
-   width: 170px;
-  }
-
-  .img-thumbnails img {
-   left: 23.5%;
-  }
-
-/*---- 4. c. Footer Layout ----*/
-  #site-footer {
-   margin-left: 10px;
-   margin-right: 10px;
-  }
+ body {
+  margin-bottom: 0;
  }
+
+ body > div {
+  max-width: 75em;
+ }
+
+ /*---- 4.a. Header Layout ----*/
+ #page-header {}
+
+ #site-logo {
+  width: 40%;
+ }
+
+ /*---- 4.b. Main Body Styling ----*/
+ #product-name {
+  font-size: 3em;
+ }
+
+ #info {
+  display: flex;
+ }
+
+ #product-image {
+  width: auto;
+  margin-right: 1em;
+  margin-left: 1em;
+ }
+
+ #product-descrip {
+  padding-right: .3em;
+ }
+
+ #product-price {
+  margin-top: 2em;
+  padding: 0;
+ }
+
+ /*--Top Banner image--*/
+ #banner {
+  background-size: cover;
+ }
+
+ #banner-list {
+  background-color: transparent;
+  height: 498px;
+ }
+
+ /*--bottom section--*/
+ #review-recipes {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+ }
+
+ /*--Recipes--*/
+ #recipes {
+  width: 30%;
+  margin-left: 10px;
+ }
+
+ .img-thumbnails {
+  margin: 5px 5px 40px 0px;
+  width: 170px;
+ }
+
+ .img-thumbnails img {
+  left: 23.5%;
+ }
+
+ /*---- 4. c. Footer Layout ----*/
+ #site-footer {
+  margin-left: 10px;
+  margin-right: 10px;
+ }
+}

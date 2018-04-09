@@ -118,6 +118,7 @@ h6 {
 
 #main-content-title {
  margin: 0;
+ padding-left: 5px;
 }
 
 /*--Top Banner image--*/
@@ -330,7 +331,6 @@ h6 {
   #page-header {}
 
   #site-logo {
-   height: 40%;
    width: 40%;
   }
 

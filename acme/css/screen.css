@@ -3,7 +3,7 @@ Most of these comments are for myself*/
 
 /*Imports first - normalize css stylesheet*/
 
-@import url('normalize.css');
+@import url('/acme/css/normalize.css');
 
 /*------------Table of Contents--------
 1. General Rules
@@ -14,12 +14,13 @@ Most of these comments are for myself*/
  2.d. Content pages
  2.e. Footer Layout
 3. Medium Screen Rules (650px-1000px)
- 3.a Main Body Styling
- 3.b Fotter Layout
+ 3.a. Main Nav
+ 3.b. Main Body Styling
+ 3.c. Fotter Layout
 4. Large Screens Rules (1000px and up)
  4.a. Header layout
- 4.b. Main Nav
- 4.c. Main Body Styling
+ 4.b. Main Body Styling
+ 4.c. Footer Layout
 */
 
 /*---1. General Ruls ---*/
@@ -78,45 +79,39 @@ h6 {
 }
 
 #site-logo {
- width: 70%;
+ width: 50%;
 }
 
 /*---- 2.b. Main Nav ----*/
 
-#acmeNav {
- padding: 10px 5px;
- font-size: 30px;
+#nav {
  width: 100%;
  display: flex;
  list-style: none;
-}
-
-#acmeNav ul {
- margin-left: 0;
- margin-bottom: 0;
- margin-top: 0;
+ background-color: #de2226;
  padding-top: 1vw;
  padding-bottom: 1vw;
- padding-left: 10px;
- background-color: #de2226;
+ padding-left: .3em;
+ margin-top: 0;
+ margin-bottom: 0;
+ margin-left: 0;
  flex-wrap: nowrap;
 }
 
-#acmeNav ul li {
- padding-right: 2vw;
- color: #FFF;
- font-weight: 200;
+#nav li {
+ font-size: 5vw;
+ padding-right: 1.3vw;
 }
 
-#acmeNav a {
+#nav a {
  text-decoration: none;
  color: #FFF;
+ padding: 2px;
 }
 
-#acmeNav a:hover {
+#nav a:hover {
  color: #de2226;
  background-color: #FFF;
- padding: .4em .3em;
 }
 
 /*---- 2.c. Main Body Styling - Home Page ----*/
@@ -126,6 +121,7 @@ h6 {
 }
 
 /*--Top Banner image--*/
+
 #banner {
  background-image: url(/acme/images/site/feature.jpg);
  background-size: 100%;
@@ -135,10 +131,12 @@ h6 {
 }
 
 #banner-list {
- height: 45vw;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ background-color: rgba(255, 255, 255, 0.65);
  list-style: none;
  color: #de2226;
- margin-right: 5px;
  margin-top: 2px;
  margin-bottom: 0;
  padding: 0;
@@ -152,12 +150,11 @@ h6 {
 
 #banner-list li {
  padding-bottom: 3px;
- width: 200px;
- font-size: 16px;
+ font-size: 5vw;
 }
 
 #actionbtn {
- width: 200px;
+ width: 55vw;
 }
 
 /*--bottom section--*/
@@ -167,6 +164,7 @@ h6 {
 }
 
 /*--Reviews--*/
+
 #review-list {
  font-size: 1.2em;
 }
@@ -176,6 +174,7 @@ h6 {
 }
 
 /*--Recipes--*/
+
 #recipes {
  margin-left: 5px;
 }
@@ -210,57 +209,80 @@ h6 {
 }
 
 /*---- 2.d. Content pages ----*/
-#products {
- margin: .2em;
- font-size: 1.5em;
+
+#product-name {
+ margin: 0;
+ padding: 5px 0px 5px 10px;
+ font-size: 2em;
 }
 
-# info{
- display: block;
- flex-direction: row;
- align-items: flex-start
+#info {
+ font-size: 20px;
 }
 
 #product-image {
- margin-right: 1em;
+ width: 100%;
+ margin-bottom: .5em;
 }
 
-#right ul{
+#right {
+ padding-left: 5px;
+}
+
+#product-descrip {
+ margin-top: 0;
+}
+
+#right ul {
  list-style: none;
  padding-left: 0;
 }
 
+#right ul li {
+ padding-bottom: 3px;
+}
+
 #product-price {
- margin-top: 2em;
+ margin: 0;
+ padding-bottom: 5px;
  color: #de2226;
  font-size: 2em;
+ font-weight: bold;
 }
 
 /*---- 2.e. Footer Layout ----*/
 
 #site-footer {
  border-top: 3px solid #000;
- margin-left: 10px;
- margin-right: 10px;
  text-align: center;
 }
 
-/*------------- 3. Medium screen Rules: 620px -------------*/
+/*------------- 3. Medium screen Rules: 650px -------------*/
 
 @media screen and (min-width: 650px) {
- /*---- 3.a. Main Body Layout ----*/
-
  #main-content-title {
   margin: 0;
   font-size: 2.5em;
  }
 
+ /*---- 3. a. Main Nav ----*/
+ #nav {
+  padding-left: 10px;
+ }
+
+ #nav li {
+  font-size: 1.5em;
+  padding-right: 1.5vw;
+ }
+
+ /*---- 3.b. Main Body Layout ----*/
  /*---Top banner image---*/
  #banner-list {
   height: 40vw;
   font-size: 1.3em;
   margin-right: 20px;
   margin-top: 30px;
+  background-color: transparent;
  }
 
  #banner-list h2 {
@@ -278,96 +300,100 @@ h6 {
   width: 301px;
  }
 
-/*---bottom section---*/
+ /*---bottom section---*/
  #review-recipes h2 {
   font-size: 2em;
  }
 
- /*---- 3.b. Footer Layout ----*/
+ /*---content pages---*/
+ #product-image {
+  width: auto;
+ }
 
+ /*---- 3.c. Footer Layout ----*/
  #siteFooter {
   font-size: 20px;
  }
 
-/*------------- 4. Large Screen Rules: 1000px -------------*/
+ /*------------- 4. Large Screen Rules: 1000px -------------*/
+ @media screen and (min-width: 1000px) {
 
-@media screen and (min-width: 1000px) {
+  body {
+   margin-bottom: 0;
+  }
 
- body {
-  margin-bottom: 0;
+  body > div {
+   max-width: 75em;
+  }
+
+  /*---- 4.a. Header Layout ----*/
+  #page-header {}
+
+  #site-logo {
+   height: 40%;
+   width: 40%;
+  }
+
+  /*---- 4.b. Main Body Styling ----*/
+
+  #product-name {
+   font-size: 3em;
+  }
+
+  #info {
+   display: flex;
+  }
+
+  #product-image {
+   width: auto;
+   margin-right: 1em;
+   margin-left: 1em;
+  }
+
+  #product-descrip {
+   padding-right: .3em;
+  }
+
+  #product-price {
+   margin-top: 2em;
+   padding: 0;
+  }
+
+  /*--Top Banner image--*/
+  #banner {
+   background-size: cover;
+  }
+
+  #banner-list {
+   background-color: transparent;
+   height: 498px;
+  }
+
+  /*--bottom section--*/
+  #review-recipes {
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: flex-end;
+  }
+
+  /*--Recipes--*/
+  #recipes {
+   width: 30%;
+   margin-left: 10px;
+  }
+
+  .img-thumbnails {
+   margin: 5px 5px 40px 0px;
+   width: 170px;
+  }
+
+  .img-thumbnails img {
+   left: 23.5%;
+  }
+
+/*---- 4. c. Footer Layout ----*/
+  #site-footer {
+   margin-left: 10px;
+   margin-right: 10px;
+  }
  }
-
- body > div {
-  max-width: 75em;
- }
-
- /*---- 4.a. Header Layout ----*/
-
- #page-header {
-
- }
-
- #site-logo {
-  height: 30%;
-  width: 30%;
- }
-
- /*---- 4.b. Main Nav ----*/
-
- nav {
-  background-color: #de2226;
-  padding-top: .1em;
- }
-
- nav ul li {
-  display: inline-block;
-  font-size: 6vw;
-  color: #FFF;
-  padding: .2em;
- }
-
- nav a:link, nav a:visited {
-  text-decoration: none;
-  color: #FFF;
- }
-
- nav li:hover, nav a:hover {
-  background-color: #FFF;
-  color: #de2226;
-  cursor:pointer;
- }
-
- /*---- 4.c. Main Body Styling ----*/
-
- /*--Top Banner image--*/
- #banner {
-  background-size: cover;
- }
-
- #banner-list {
-  height: 498px;
- }
-
- /*--bottom section--*/
-
- #review-recipes {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
- }
-
- /*--Recipes--*/
- #recipes {
-  width: 30%;
-  margin-left: 10px;
- }
-
- .img-thumbnails {
-  margin: 5px 5px 40px 0px;
-  width: 170px;
- }
-
- .img-thumbnails img {
-  left: 23.5%;
- }
-}

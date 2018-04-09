@@ -11,111 +11,157 @@ function getData() {
   .then(function (data) {
    console.log('Json object from getData function:');
 
-   processJSON(data);
-//   displayData(data);
+   buildNav(data);
   })
 
   .catch(error => console.log('There was an error: ', error))
 } // end getData function
 
+function buildNav(data) {
 
-function processJSON(data) {
- let options = document.getElementById("acmeNav");
- let navList = "<li><a href=\"\" title=\"Homepage\">Home</a></li>"
- let navDisplay = ["Anvils", "Explosives", "Decoys", "Traps"];
+ for (let i = 0; i < data.Navigation.length; i++) {
+  let navList = "<li> ";
+  //"<a href=" + "'/acme/index.html' title='#'>" + data.Navigation[i] + "</a>";
+  let link = "<a href=" + "'/acme/index.html' title=" + data.Navigation[i] + ">" + data.Navigation[i] + "</a>";
 
- for (let i = 0; i < navDisplay.length; i++) {
-  navList += "<li id=\"" + data[navDisplay[i]].display + "\" >" + data[navDisplay[i]].display + "</li>";
+  navList += link + "</li>";
+  console.log(navList);
+
+  let ul = document.getElementById('nav');
+  ul.innerHTML += navList;
  }
 
- options.innerHTML = navList;
- console.log(options);
- addEventeListenersToList(data, navDisplay);
-}
+
+ const LIST = document.getElementById('nav');
+
+ LIST.addEventListener("click", function (event) {
+  let linkClicked = event.target.innerHTML;
+  event.preventDefault();
+  console.log(linkClicked);
+
+  if (linkClicked == "Home") {
+   document.getElementById("page-title").innerHTML = "Home | Acme.Inc";
+
+   //show home page, hide content pages
+   document.getElementById("main-content").setAttribute("class", "show");
+   document.getElementById("products").setAttribute("class", "hide");
+  }
+
+  else if (linkClicked == "Anvils") {
+   document.getElementById("page-title").innerHTML = "Anvils | Acme.Inc";
+
+   //hide the home page, show content page
+   document.getElementById("main-content").setAttribute("class", "hide");
+   document.getElementById("products").setAttribute("class", "show");
+
+   //populate content page using the json file
+   document.getElementById("product-name").innerHTML = data.Anvils.name;
+
+   document.getElementById("product-image").setAttribute("src", data.Anvils.path);
+
+   document.getElementById("product-descrip").innerHTML = data.Anvils.description;
+
+   document.getElementById("man").innerHTML = data.Anvils.manufacturer;
+
+   document.getElementById("review").innerHTML = data.Anvils.reviews + "/5 stars";
+
+   document.getElementById("product-price").innerHTML = "Price: $" + data.Anvils.price;
+  }
+
+  else if (linkClicked == "Explosives") {
+   document.getElementById("page-title").innerHTML = "Explosives | Acme.Inc";
+
+   //hide the home page, show content page
+   document.getElementById("main-content").setAttribute("class", "hide");
+   document.getElementById("products").setAttribute("class", "show");
+
+   //populate content page using the json file
+   document.getElementById("product-name").innerHTML = data.Explosives.name;
+
+   document.getElementById("product-image").setAttribute("src", data.Explosives.path);
+
+   document.getElementById("product-descrip").innerHTML = data.Explosives.description;
+
+   document.getElementById("man").innerHTML = data.Explosives.manufacturer;
+
+   document.getElementById("review").innerHTML = data.Explosives.reviews + "/5 stars";
+
+   document.getElementById("product-price").innerHTML = "Price: $" + data.Explosives.price;
+  }
+
+  else if (linkClicked == "Decoys") {
+   document.getElementById("page-title").innerHTML = "Decoys | Acme.Inc";
+
+   //hide the home page, show content page
+   document.getElementById("main-content").setAttribute("class", "hide");
+   document.getElementById("products").setAttribute("class", "show");
+
+   //populate content page using the json file
+   document.getElementById("product-name").innerHTML = data.Decoys.name;
+
+   document.getElementById("product-image").setAttribute("src", data.Decoys.path);
+
+   document.getElementById("product-descrip").innerHTML = data.Decoys.description;
+
+   document.getElementById("man").innerHTML = data.Decoys.manufacturer;
+
+   document.getElementById("review").innerHTML = data.Decoys.reviews + "/5 stars";
+
+   document.getElementById("product-price").innerHTML = "Price: $" + data.Decoys.price;
+  }
+
+  else if (linkClicked == "Traps") {
+   document.getElementById("page-title").innerHTML = "Traps | Acme.Inc";
+
+   //hide the home page, show content page
+   document.getElementById("main-content").setAttribute("class", "hide");
+   document.getElementById("products").setAttribute("class", "show");
+
+   //populate content page using the json file
+   document.getElementById("product-name").innerHTML = data.Traps.name;
+
+   document.getElementById("product-image").setAttribute("src", data.Traps.path);
+
+   document.getElementById("product-descrip").innerHTML = data.Traps.description;
+
+   document.getElementById("man").innerHTML = data.Traps.manufacturer;
+
+   document.getElementById("review").innerHTML = data.Traps.reviews + "/5 stars";
+
+   document.getElementById("product-price").innerHTML = "Price: $" + data.Traps.price;
+  }
+
+ })
+};
 
 
-function addEventeListenersToList(data, navDisplay){
- var anvil = document.getElementById("Anvil");
- var explosive = document.getElementById("Explosives");
- var decoy = document.getElementById("Decoy");
- var trap = document.getElementById("Trap");
- var aux = [anvil, explosive, decoy,trap];
- for (let i = 0; i < aux.length; i++) {
-  aux[i].addEventListener("click", function(){show(data, navDisplay, i)});
- }
-}
 
-
-function show(data, navDisplay, i)
-{
- toogle();
- let name = document.getElementById("product-name");
- name.innerHTML = data[navDisplay[i]].name;
-
- let image = document.getElementById("product-image");
- image.setAttribute("src", data[navDisplay[i]].path);
-
- let description = document.getElementById("product-descrip");
- description.innerHTML = data[navDisplay[i]].description;
-
- let manufacturer = document.getElementById("man");
- manufacturer.innerHTML = data[navDisplay[i]].manufacturer;
-
- let review = document.getElementById("review");
- review.innerHTML = data[navDisplay[i]].reviews;
-
- let price = document.getElementById("product-price");
- price.innerHTML = "Price: $" + data[navDisplay[i]].price;
-
-}
-function toogle(){
- let content = document.getElementById("main-content");
- content.setAttribute("class", "hide");
-
- let productContent = document.getElementById("products");
- productContent.setAttribute("class", "show");
-}
-
- // Build unordered list
- // for loop to get the results
- /*let list = "<ul>";
- for (let i = 0; i < 4; i++) {
-  list += "<li>" + data.navarray[i] + "<li>";
- }
- list += "<ul>";*/
-
- // Display list into the nave section of the web page
- //acmeNav.innerHTML = list;
- // ends the processJSON function
-
-//Display the data from the json file
-//function displayData(data) {
-// //Anvils
-// let title = data.Anvils.name;
-// console.log(title);
-// document.getElementById("page-title").innerHTML = title + " | Acme.Inc";
+//function show(data, navDisplay, i)
+//{
+// toogle();
+// let name = document.getElementById("product-name");
+// name.innerHTML = data[navDisplay[i]].name;
 //
-// let name = data.Anvils.name;
-// console.log(name);
-// document.getElementById("product-name").innerHTML = name;
+// let image = document.getElementById("product-image");
+// image.setAttribute("src", data[navDisplay[i]].path);
 //
-// let img = data.Anvils.path;
-// console.log(img);
-// document.getElementById("product-image").src = img;
+// let description = document.getElementById("product-descrip");
+// description.innerHTML = data[navDisplay[i]].description;
 //
-// let descrip = data.Anvils.description;
-// console.log(descrip);
-// document.getElementById("product-descrip").innerHTML = descrip;
+// let manufacturer = document.getElementById("man");
+// manufacturer.innerHTML = data[navDisplay[i]].manufacturer;
 //
-// let man = data.Anvils.manufacturer;
-// console.log(man);
-// document.getElementById("product-man").innerHTML = "Made by: " + man;
+// let review = document.getElementById("review");
+// review.innerHTML = data[navDisplay[i]].reviews;
 //
-// let price = data.Anvils.price;
-// console.log(price);
-// document.getElementById("product-price").innerHTML = "Price: $" + price;
+// let price = document.getElementById("product-price");
+// price.innerHTML = "Price: $" + data[navDisplay[i]].price;
 //
-// let review = data.Anvils.reviews;
-// console.log(review);
-// document.getElementById("product-review").innerHTML = "Reviews: " + review + "/5 stars";
+//}
+//function toogle(){
+// let content = document.getElementById("main-content");
+// content.setAttribute("class", "hide");
+//
+// let productContent = document.getElementById("products");
+// productContent.setAttribute("class", "show");
 //}

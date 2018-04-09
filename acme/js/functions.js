@@ -10,7 +10,7 @@ function getData() {
   .then(response => response.json())
   .then(function (data) {
    console.log('Json object from getData function:');
-
+   console.log(data);
    buildNav(data);
   })
 

@@ -325,10 +325,6 @@ h6 {
   margin-bottom: 0;
  }
 
- body > div {
-  max-width: 75em;
- }
-
  /*---- 4.a. Header Layout ----*/
  #page-header {}
 

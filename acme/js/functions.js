@@ -125,35 +125,3 @@ function buildNav(data) {
 
  })
 };
-
-
-
-//function show(data, navDisplay, i)
-//{
-// toogle();
-// let name = document.getElementById("product-name");
-// name.innerHTML = data[navDisplay[i]].name;
-//
-// let image = document.getElementById("product-image");
-// image.setAttribute("src", data[navDisplay[i]].path);
-//
-// let description = document.getElementById("product-descrip");
-// description.innerHTML = data[navDisplay[i]].description;
-//
-// let manufacturer = document.getElementById("man");
-// manufacturer.innerHTML = data[navDisplay[i]].manufacturer;
-//
-// let review = document.getElementById("review");
-// review.innerHTML = data[navDisplay[i]].reviews;
-//
-// let price = document.getElementById("product-price");
-// price.innerHTML = "Price: $" + data[navDisplay[i]].price;
-//
-//}
-//function toogle(){
-// let content = document.getElementById("main-content");
-// content.setAttribute("class", "hide");
-//
-// let productContent = document.getElementById("products");
-// productContent.setAttribute("class", "show");
-//}
